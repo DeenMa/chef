@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/background"
+    tools:context="com.example.deenma.chef.activities.WelcomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/welcome_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welcome_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_title"
+            android:textSize="@dimen/large"
+            android:textColor="@color/text"/>
+        
+        <TextView
+            android:id="@+id/welcome_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcome_title"
+            android:layout_marginLeft="30dp"
+            android:text="@string/welcome_detail"
+            android:textSize="@dimen/medium"
+            android:textColor="@color/text"/>
+    </RelativeLayout>
+</RelativeLayout>

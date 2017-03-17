@@ -1,0 +1,18 @@
+<resources>
+    <!-- General strings -->
+    <string name="app_name">CHEF</string>
+    <string name="button_start">Start</string>
+    <string name="button_continue">Continue</string>
+
+    <!-- Activity specific strings -->
+    <string name="welcome_title">CHEF</string>
+    <string name="welcome_detail">Compensate &amp; Handle \n \t\t Easy &amp; Fast</string>
+
+    <string name="steps_title">Steps</string>
+    <string name="steps_details">We will guide you for the rest of the process\n\n1. Take a picture\n2. Make an agreement\n3. File the claim</string>
+
+    <string name="tips_title">Tips</string>
+    <string name="tips_details">Please turn “Location” on for the convenience of the police.
+        \n\nFor your safety, please turn “Emergency Light” on. If at night, also turn “Outline Marker Lamps” and “Back Light” on at night.
+        \n\nRemember to put a “Triangle Warning Sign” at the back of the car as well.</string>
+</resources>

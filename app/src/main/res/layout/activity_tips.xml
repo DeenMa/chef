@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/tips_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tips_title"
+        android:textSize="@dimen/large"
+        android:textColor="@color/text"/>
+
+    <TextView
+        android:id="@+id/tips_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tips_title"
+        android:layout_marginTop="@dimen/margin_title_detail"
+        android:text="@string/tips_details"
+        android:textSize="@dimen/medium"
+        android:textColor="@color/text"/>
+
+    <Button
+        android:id="@+id/tips_button_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/button_continue"
+        android:textSize="@dimen/medium"
+        android:textColor="@color/text"
+        android:background="@color/background_button"/>
+</RelativeLayout>
