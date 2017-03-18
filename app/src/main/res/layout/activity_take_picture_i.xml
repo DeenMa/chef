@@ -5,8 +5,55 @@
     android:background="@color/background">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/take_picture_title"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="test"/>
+        android:text="@string/take_picture_title"
+        android:textSize="@dimen/large"
+        android:textColor="@color/text"/>
+
+    <TextView
+        android:id="@+id/take_picture_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/take_picture_title"
+        android:layout_marginTop="@dimen/margin_title_detail"
+        android:text="@string/take_picture_i_details"
+        android:textSize="@dimen/medium"
+        android:textColor="@color/text"/>
+
+    <Button
+        android:id="@+id/take_picture_i_button_single_car"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:layout_below="@id/take_picture_details"
+        android:layout_marginTop="@dimen/margin_title_detail"
+        android:text="@string/button_take_picture_i_single_car"
+        android:textColor="@color/text"
+        android:textSize="@dimen/medium"
+        android:gravity="start"/>
+
+    <Button
+        android:id="@+id/take_picture_i_button_double_cars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:layout_below="@id/take_picture_i_button_single_car"
+        android:text="@string/button_take_picture_i_double_cars"
+        android:textColor="@color/text"
+        android:textSize="@dimen/medium"
+        android:gravity="start"/>
+
+    <Button
+        android:id="@+id/take_picture_i_button_multiple_cars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:layout_below="@id/take_picture_i_button_double_cars"
+        android:text="@string/button_take_picture_i_multiple_cars"
+        android:textColor="@color/text"
+        android:textSize="@dimen/medium"
+        android:gravity="start"/>
 
 </RelativeLayout>

@@ -15,4 +15,11 @@
     <string name="tips_details">Please turn “Location” on for the convenience of the police.
         \n\nFor your safety, please turn “Emergency Light” on. If at night, also turn “Outline Marker Lamps” and “Back Light” on at night.
         \n\nRemember to put a “Triangle Warning Sign” at the back of the car as well.</string>
+
+    <string name="take_picture_title">Take picture and move the car</string>
+    <string name="take_picture_i_details">Please select collision type:</string>
+
+    <string name="button_take_picture_i_single_car">Single Car</string>
+    <string name="button_take_picture_i_double_cars">Double Cars</string>
+    <string name="button_take_picture_i_multiple_cars">Multiple Cars</string>
 </resources>
