@@ -27,7 +27,7 @@ public class TakePictureIActivity extends Activity {
         buttonSingleCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(TakePictureIActivity.this, "Not supported yet", Toast.LENGTH_SHORT).show();
+                Toast.makeText(TakePictureIActivity.this, R.string.button_toast_not_supported, Toast.LENGTH_SHORT).show();
             }
         });
         final Context ctx = this;
@@ -37,6 +37,13 @@ public class TakePictureIActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(ctx, TakePictureIIActivity.class);
                 startActivity(intent);
+            }
+        });
+        Button buttonMultipleCars = (Button) findViewById(R.id.take_picture_i_button_multiple_cars);
+        buttonMultipleCars.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(TakePictureIActivity.this, R.string.button_toast_not_supported, Toast.LENGTH_SHORT).show();
             }
         });
     }

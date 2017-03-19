@@ -5,7 +5,7 @@
     android:background="@color/background">
 
     <TextView
-        android:id="@+id/take_picture_title"
+        android:id="@+id/take_picture_i_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/take_picture_title"
@@ -13,10 +13,10 @@
         android:textColor="@color/text"/>
 
     <TextView
-        android:id="@+id/take_picture_details"
+        android:id="@+id/take_picture_i_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/take_picture_title"
+        android:layout_below="@id/take_picture_i_title"
         android:layout_marginTop="@dimen/margin_title_detail"
         android:text="@string/take_picture_i_details"
         android:textSize="@dimen/medium"
@@ -26,34 +26,36 @@
         android:id="@+id/take_picture_i_button_single_car"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/transparent"
-        android:layout_below="@id/take_picture_details"
+        android:background="@color/colorBlueDark"
+        android:layout_below="@id/take_picture_i_details"
         android:layout_marginTop="@dimen/margin_title_detail"
         android:text="@string/button_take_picture_i_single_car"
         android:textColor="@color/text"
         android:textSize="@dimen/medium"
-        android:gravity="start"/>
+        android:gravity="center_vertical"/>
 
     <Button
         android:id="@+id/take_picture_i_button_double_cars"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/transparent"
+        android:background="@color/colorBlueDark"
         android:layout_below="@id/take_picture_i_button_single_car"
+        android:layout_marginTop="@dimen/seperate_line"
         android:text="@string/button_take_picture_i_double_cars"
         android:textColor="@color/text"
         android:textSize="@dimen/medium"
-        android:gravity="start"/>
+        android:gravity="center_vertical"/>
 
     <Button
         android:id="@+id/take_picture_i_button_multiple_cars"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/transparent"
+        android:background="@color/background_button"
         android:layout_below="@id/take_picture_i_button_double_cars"
+        android:layout_marginTop="@dimen/seperate_line"
         android:text="@string/button_take_picture_i_multiple_cars"
         android:textColor="@color/text"
         android:textSize="@dimen/medium"
-        android:gravity="start"/>
+        android:gravity="center_vertical"/>
 
 </RelativeLayout>

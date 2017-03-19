@@ -20,6 +20,7 @@
         <activity android:name=".activities.StepsActivity"></activity>
         <activity android:name=".activities.TipsActivity"></activity>
         <activity android:name=".activities.TakePictureIActivity"></activity>
+        <activity android:name=".activities.TakePictureIIActivity"></activity>
     </application>
 
 </manifest>

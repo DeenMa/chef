@@ -8,7 +8,7 @@
     <color name="colorBlueDark">#2874A6</color>
     <color name="colorRedDark">#943126</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="transparent">#00FFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
 
     <color name="background">@color/colorBlueLight</color>
     <color name="background_button">@color/colorBlueDark</color>

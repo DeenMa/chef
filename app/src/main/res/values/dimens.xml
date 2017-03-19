@@ -3,4 +3,5 @@
     <dimen name="large">48sp</dimen>
     <dimen name="medium">24sp</dimen>
     <dimen name="margin_title_detail">30dp</dimen>
+    <dimen name="seperate_line">1dp</dimen>
 </resources>

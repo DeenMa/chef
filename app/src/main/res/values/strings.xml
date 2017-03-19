@@ -3,6 +3,8 @@
     <string name="app_name">CHEF</string>
     <string name="button_start">Start</string>
     <string name="button_continue">Continue</string>
+    <string name="button_toast_not_supported">Not supported yet!</string>
+    <string name="take_picture_text">Take</string>
 
     <!-- Activity specific strings -->
     <string name="welcome_title">CHEF</string>
@@ -22,4 +24,12 @@
     <string name="button_take_picture_i_single_car">Single Car</string>
     <string name="button_take_picture_i_double_cars">Double Cars</string>
     <string name="button_take_picture_i_multiple_cars">Multiple Cars</string>
+
+    <string name="take_picture_ii_details">Please take pictures of specific places:</string>
+    <string name="take_picture_ii_front_side_view">Front-side View</string>
+    <string name="take_picture_ii_collision_your_car">Collision - Your car</string>
+    <string name="take_picture_ii_collision_opponents_car">Collision - Opponent\'s car</string>
+    <string name="take_picture_ii_license_plate_your_car">License plate - Your car</string>
+    <string name="take_picture_ii_license_plate_opponents_car">License plate - Opponent\'s car</string>
+    <string name="take_picture_ii_additional">Additional photo (Optional)</string>
 </resources>
