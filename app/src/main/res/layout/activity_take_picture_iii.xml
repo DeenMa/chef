@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/take_picture_iii_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/take_picture_title"
+        android:textSize="@dimen/large"
+        android:textColor="@color/text"/>
+
+    <TextView
+        android:id="@+id/take_picture_iii_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/take_picture_iii_title"
+        android:layout_marginTop="@dimen/margin_title_detail"
+        android:text="@string/take_picture_iii_details"
+        android:textSize="@dimen/medium"
+        android:textColor="@color/text"/>
+
+    <Button
+        android:id="@+id/steps_button_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/button_continue"
+        android:textSize="@dimen/medium"
+        android:textColor="@color/text"
+        android:background="@color/background_button"/>
+</RelativeLayout>

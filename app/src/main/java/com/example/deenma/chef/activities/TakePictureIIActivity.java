@@ -1,6 +1,7 @@
 package com.example.deenma.chef.activities;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.deenma.chef.R;
 import java.io.File;
@@ -128,6 +130,41 @@ public class TakePictureIIActivity extends Activity {
                 takePictureAndSave(Constants.ADDITIONAL);
             }
         });
+
+        Button buttonContinue =
+                (Button) findViewById(R.id.take_picture_ii_button_continue);
+        final Context ctx = this;
+        buttonContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean continueAllowed = checkButtonContinue();
+                if (continueAllowed) {
+                    Intent intent = new Intent(ctx, TakePictureIIIActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(TakePictureIIActivity.this, R.string.not_enough_pics, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    private boolean checkButtonContinue() {
+        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES), getString(Constants.APP_NAME_ID));
+        File[] list = mediaStorageDir.listFiles();
+        int num = 0;
+        for (File f : list) {
+            String fName = f.getName();
+            // we strictly restrict our images into one of these five types
+            if (fName.contains(Constants.IMAGE_FRONT_SIDE_VIEW)
+                    || fName.contains(Constants.IMAGE_COLLISION_YOUR_CAR)
+                    || fName.contains(Constants.IMAGE_COLLISION_OPPONENTS_CAR)
+                    || fName.contains(Constants.LICENSE_PLATE_YOUR_CAR)
+                    || fName.contains(Constants.LICENSE_PLATE_OPPONENTS_CAR)) {
+                num++;
+            }
+        }
+        return num == 5; // there shall be 5 effective images
     }
 
     private void takePictureAndSave(String filename) {
@@ -139,7 +176,7 @@ public class TakePictureIIActivity extends Activity {
 
     private File getOutputMediaFile(String filename) {
         File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES), Constants.APP_NAME);
+                Environment.DIRECTORY_PICTURES), getString(Constants.APP_NAME_ID));
         if (!mediaStorageDir.exists()) {
             if (!mediaStorageDir.mkdirs()) {
                 return null;
@@ -157,5 +194,4 @@ public class TakePictureIIActivity extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     }
-
 }

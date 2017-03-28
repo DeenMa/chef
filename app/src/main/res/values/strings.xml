@@ -32,4 +32,7 @@
     <string name="take_picture_ii_license_plate_your_car">License plate - Your car</string>
     <string name="take_picture_ii_license_plate_opponents_car">License plate - Opponent\'s car</string>
     <string name="take_picture_ii_additional">Additional photo (Optional)</string>
+    <string name="not_enough_pics">Please capture all required pictures!</string>
+
+    <string name="take_picture_iii_details">Please move the car to the safe area in order to avoid traffic jam</string>
 </resources>

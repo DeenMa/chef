@@ -11,8 +11,10 @@ public class Constants {
     // request code
     public static final int REQUEST_IMAGE_CAPTURE = 1;
 
+    // ids
+    public static final int APP_NAME_ID = R.string.app_name;
+
     // file names
-    public static final String APP_NAME = "chef";
     public static final String IMAGE_FRONT_SIDE_VIEW = "front_side_view";
     public static final String IMAGE_COLLISION_YOUR_CAR = "collision_your_car";
     public static final String IMAGE_COLLISION_OPPONENTS_CAR = "collision_opponents_car";
