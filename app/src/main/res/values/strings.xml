@@ -35,4 +35,6 @@
     <string name="not_enough_pics">Please capture all required pictures!</string>
 
     <string name="take_picture_iii_details">Please move the car to the safe area in order to avoid traffic jam</string>
+
+    <string name="information_title">Information</string>
 </resources>
