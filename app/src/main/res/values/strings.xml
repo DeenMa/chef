@@ -1,13 +1,13 @@
 <resources>
     <!-- General strings -->
-    <string name="app_name">CHEF</string>
+    <string name="app_name">eClaim-PAIC</string>
     <string name="button_start">Start</string>
     <string name="button_continue">Continue</string>
     <string name="button_toast_not_supported">Not supported yet!</string>
     <string name="take_picture_text">Take</string>
 
     <!-- Activity specific strings -->
-    <string name="welcome_title">CHEF</string>
+    <string name="welcome_title">@string/app_name</string>
     <string name="welcome_detail">Compensate &amp; Handle \n \t\t Easy &amp; Fast</string>
 
     <string name="steps_title">Steps</string>
