@@ -25,5 +25,7 @@
         <activity android:name=".activities.TipsActivity"></activity>
         <activity android:name=".activities.TakePictureIActivity"></activity>
         <activity android:name=".activities.TakePictureIIActivity"></activity>
+        <activity android:name=".activities.TakePictureIIIActivity"></activity>
+        <activity android:name=".activities.InformationActivity"></activity>
     </application>
 </manifest>

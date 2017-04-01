@@ -11,8 +11,156 @@
         android:layout_height="wrap_content"
         android:text="@string/information_title"
         android:textSize="@dimen/large"
-        android:textColor="@color/text"/>
+        android:textColor="@color/text"
+        android:layout_marginBottom="@dimen/margin_title_detail"/>
 
-    <!--TODO: Add scroll view here-->
+    <ScrollView
+        android:id="@+id/information_scroll_view"
+        android:layout_below="@+id/information_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:id="@+id/information_linear_layout_major"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/information_linear_layout_highway_quest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/information_textview_highway_quest"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/information_highway_quest"
+                    android:textSize="@dimen/medium"
+                    android:textColor="@color/text"/>
+
+                <Spinner
+                    android:id="@+id/information_spinner_highway_quest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_edittext">
+                </Spinner>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/information_subtitle_your_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/information_subtitle_your_information"
+                android:textSize="@dimen/medium"
+                android:textColor="@color/text"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/between_section"/>
+
+            <LinearLayout
+                android:id="@+id/information_linear_layout_your_information_driver_license"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/seperate_line"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <Button
+                    android:id="@+id/information_button_your_information_driver_license"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_button"
+                    android:text="@string/information_button_driver_license"
+                    android:textSize="@dimen/medium"
+                    android:textColor="@color/text"
+                    android:gravity="center_vertical"/>
+                <Button
+                    android:id="@+id/information_button_your_information_driver_license_take"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/seperate_line"
+                    android:background="@color/background_button"
+                    android:text="@string/take_picture_text"
+                    android:textSize="@dimen/medium"
+                    android:textColor="@color/text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/information_linear_layout_your_information_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/information_textview_your_information_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/information_textview_name"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+                
+                <EditText
+                    android:id="@+id/information_edittext_your_information_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_edittext"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/information_linear_layout_your_information_plate_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/information_textview_your_information_plate_number"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/information_textview_plate_number"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <EditText
+                    android:id="@+id/information_edittext_your_information_plate_number"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_edittext"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/information_linear_layout_your_information_plate_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/information_textview_your_information_plate_color"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/information_textview_plate_color"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <Spinner
+                    android:id="@+id/information_spinner_your_information_plate_color"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_edittext">
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

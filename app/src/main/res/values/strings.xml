@@ -37,4 +37,26 @@
     <string name="take_picture_iii_details">Please move the car to the safe area in order to avoid traffic jam</string>
 
     <string name="information_title">Information</string>
+    <string name="information_highway_quest">Does the accident happen on highway?</string>
+    <string-array name="highway_options">
+        <item>Yes</item>
+        <item>No</item>
+        <item>Not Sure</item>
+    </string-array>
+    <string name="information_subtitle_your_information">Your information</string>
+    <string name="information_button_driver_license">Driver License</string>
+    <string name="information_textview_name">Name</string>
+    <string name="information_textview_plate_number">Plate Number</string>
+    <string name="information_textview_plate_color">Plate Color</string>
+    <string-array name="plate_colors">
+        <item>Black</item>
+        <item>Gold</item>
+        <item>Green</item>
+        <item>Grey</item>
+        <item>Mixed</item>
+        <item>Orange</item>
+        <item>Red</item>
+        <item>White</item>
+    </string-array>
+
 </resources>

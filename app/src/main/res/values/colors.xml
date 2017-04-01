@@ -13,4 +13,6 @@
     <color name="background">@color/colorBlueLight</color>
     <color name="background_button">@color/colorBlueDark</color>
     <color name="text">@color/colorWhite</color>
+    <color name="divider">@color/colorWhite</color>
+    <color name="background_edittext">@color/colorWhite</color>
 </resources>
