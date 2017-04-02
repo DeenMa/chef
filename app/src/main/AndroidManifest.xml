@@ -27,5 +27,6 @@
         <activity android:name=".activities.TakePictureIIActivity"></activity>
         <activity android:name=".activities.TakePictureIIIActivity"></activity>
         <activity android:name=".activities.InformationActivity"></activity>
+        <activity android:name=".activities.ImageViewActivity"></activity>
     </application>
 </manifest>

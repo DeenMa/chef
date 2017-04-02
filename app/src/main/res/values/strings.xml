@@ -44,7 +44,7 @@
         <item>No</item>
         <item>Not Sure</item>
     </string-array>
-    <string name="information_subtitle_your_information">Your information</string>
+    <string name="information_subtitle_your_information">Your Information</string>
     <string name="information_button_driver_license">Driver License</string>
     <string name="information_textview_name">Name</string>
     <string name="information_textview_plate_number">Plate Number</string>
@@ -59,5 +59,19 @@
         <item>Red</item>
         <item>White</item>
     </string-array>
+    <string name="information_textview_car_type">Car Type</string>
+    <string-array name="car_types">
+        <item>Convertible</item>
+        <item>Coupe</item>
+        <item>Crossover</item>
+        <item>Hatckback</item>
+        <item>Sedan</item>
+        <item>SUV</item>
+        <item>Truck</item>
+        <item>Van</item>
+    </string-array>
+    <string name="information_textview_insurance_company">Insurance</string>
+    <string name="information_textview_phone_number">Phone Number</string>
+    <string name="information_subtitle_opponent_information">Opponent\'s Information</string>
 
 </resources>

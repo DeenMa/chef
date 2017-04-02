@@ -3,10 +3,8 @@ package com.example.deenma.chef.activities;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -14,6 +12,8 @@ import android.widget.Toast;
 import com.example.deenma.chef.R;
 import java.io.File;
 import com.example.deenma.chef.Constants;
+
+import com.example.deenma.chef.Utilities;
 
 /**
  * Created by deenma on 19/03/2017.
@@ -28,11 +28,12 @@ public class TakePictureIIActivity extends Activity {
     }
 
     private void setButtons() {
+        final Activity activity = this;
         Button buttonFrontSideView = (Button) findViewById(R.id.take_picture_ii_button_front_side_view);
         buttonFrontSideView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewImage(Constants.IMAGE_FRONT_SIDE_VIEW); // name of the image
+                Utilities.viewImage(activity, Constants.IMAGE_FRONT_SIDE_VIEW); // name of the image
             }
         });
 
@@ -40,7 +41,7 @@ public class TakePictureIIActivity extends Activity {
         buttonFrontSideViewTake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                takePictureAndSave(Constants.IMAGE_FRONT_SIDE_VIEW);
+                Utilities.takePictureAndSave(activity, Constants.IMAGE_FRONT_SIDE_VIEW);
             }
         });
 
@@ -48,7 +49,7 @@ public class TakePictureIIActivity extends Activity {
         buttonCollisionYourCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewImage(Constants.IMAGE_COLLISION_YOUR_CAR);
+                Utilities.viewImage(activity, Constants.IMAGE_COLLISION_YOUR_CAR);
             }
         });
 
@@ -56,7 +57,7 @@ public class TakePictureIIActivity extends Activity {
         buttonCollisionYourCarTake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                takePictureAndSave(Constants.IMAGE_COLLISION_YOUR_CAR);
+                Utilities.takePictureAndSave(activity, Constants.IMAGE_COLLISION_YOUR_CAR);
             }
         });
 
@@ -64,7 +65,7 @@ public class TakePictureIIActivity extends Activity {
         buttonCollisionOpponentsCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewImage(Constants.IMAGE_COLLISION_OPPONENTS_CAR);
+                Utilities.viewImage(activity, Constants.IMAGE_COLLISION_OPPONENTS_CAR);
             }
         });
 
@@ -73,7 +74,7 @@ public class TakePictureIIActivity extends Activity {
         buttonCollisionOpponentsCarTake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                takePictureAndSave(Constants.IMAGE_COLLISION_OPPONENTS_CAR);
+                Utilities.takePictureAndSave(activity, Constants.IMAGE_COLLISION_OPPONENTS_CAR);
             }
         });
 
@@ -81,7 +82,7 @@ public class TakePictureIIActivity extends Activity {
         buttonLicensePlateYourCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewImage(Constants.LICENSE_PLATE_YOUR_CAR);
+                Utilities.viewImage(activity, Constants.LICENSE_PLATE_YOUR_CAR);
             }
         });
 
@@ -90,7 +91,7 @@ public class TakePictureIIActivity extends Activity {
         buttonLicensePlateYourCarTake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                takePictureAndSave(Constants.LICENSE_PLATE_YOUR_CAR);
+                Utilities.takePictureAndSave(activity, Constants.LICENSE_PLATE_YOUR_CAR);
             }
         });
 
@@ -99,7 +100,7 @@ public class TakePictureIIActivity extends Activity {
         buttonLicensePlateOpponentsCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewImage(Constants.LICENSE_PLATE_OPPONENTS_CAR);
+                Utilities.viewImage(activity, Constants.LICENSE_PLATE_OPPONENTS_CAR);
             }
         });
 
@@ -108,7 +109,7 @@ public class TakePictureIIActivity extends Activity {
         buttonLicensePlateOpponentsCarTake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                takePictureAndSave(Constants.LICENSE_PLATE_OPPONENTS_CAR);
+                Utilities.takePictureAndSave(activity, Constants.LICENSE_PLATE_OPPONENTS_CAR);
             }
         });
 
@@ -118,7 +119,7 @@ public class TakePictureIIActivity extends Activity {
         buttonAdditional.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                viewImage(Constants.ADDITIONAL);
+                Utilities.viewImage(activity, Constants.ADDITIONAL);
             }
         });
 
@@ -127,7 +128,7 @@ public class TakePictureIIActivity extends Activity {
         buttonAdditionalTake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                takePictureAndSave(Constants.ADDITIONAL);
+                Utilities.takePictureAndSave(activity, Constants.ADDITIONAL);
             }
         });
 
@@ -165,33 +166,5 @@ public class TakePictureIIActivity extends Activity {
             }
         }
         return num == 5; // there shall be 5 effective images
-    }
-
-    private void takePictureAndSave(String filename) {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        Uri uri = Uri.fromFile(getOutputMediaFile(filename));
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
-        startActivityForResult(intent, Constants.REQUEST_IMAGE_CAPTURE);
-    }
-
-    private File getOutputMediaFile(String filename) {
-        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES), getString(Constants.APP_NAME_ID));
-        if (!mediaStorageDir.exists()) {
-            if (!mediaStorageDir.mkdirs()) {
-                return null;
-            }
-        }
-        String photoPath = mediaStorageDir.getPath() + File.separator +
-                "IMG_"+ filename + ".jpg";
-        return new File(photoPath);
-    }
-
-    private void viewImage(String filename) {
-        // create an intent and putExtra the filename, then open this file referring to viewPicture()
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     }
 }
