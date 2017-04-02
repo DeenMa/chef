@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -62,5 +63,13 @@ public class InformationActivity extends Activity {
         ArrayAdapter<CharSequence> adapterYourInformationPlateColor = ArrayAdapter.createFromResource(this, R.array.plate_colors, android.R.layout.simple_spinner_item);
         adapterYourInformationPlateColor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerYourInformationPlateColor.setAdapter(adapterYourInformationPlateColor);
+
+        Button buttonContinue = (Button) findViewById(R.id.information_button_continue);
+        buttonContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ctx, spinnerResultHighwayQuest + " " + spinnerResultYourInformationPlateColor, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
