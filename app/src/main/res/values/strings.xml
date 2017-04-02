@@ -46,8 +46,8 @@
     </string-array>
     <string name="information_subtitle_your_information">Your Information</string>
     <string name="information_button_driver_license">Driver License</string>
-    <string name="information_textview_name">Name</string>
-    <string name="information_textview_plate_number">Plate Number</string>
+    <string name="information_textview_name">Name*</string>
+    <string name="information_textview_plate_number">Plate Number*</string>
     <string name="information_textview_plate_color">Plate Color</string>
     <string-array name="plate_colors">
         <item>Black</item>
@@ -70,8 +70,8 @@
         <item>Truck</item>
         <item>Van</item>
     </string-array>
-    <string name="information_textview_insurance_company">Insurance</string>
-    <string name="information_textview_phone_number">Phone Number</string>
+    <string name="information_textview_insurance_company">Insurance*</string>
+    <string name="information_textview_phone_number">Phone Number*</string>
     <string name="information_subtitle_opponent_information">Opponent\'s Information</string>
 
 </resources>

@@ -49,4 +49,8 @@ public class Utilities {
                 "IMG_"+ filename + ".jpg";
         return new File(photoPath);
     }
+
+    public static boolean isNullOrEmpty(String string) {
+        return string == null || string.length() == 0;
+    }
 }

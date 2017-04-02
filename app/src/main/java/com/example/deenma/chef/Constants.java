@@ -14,6 +14,15 @@ public class Constants {
     // ids
     public static final int APP_NAME_ID = R.string.app_name;
     public static final String GET_IMAGE_REQUEST = "get_image_request";
+    public static final String RESULT_HIGHWAY_QUEST = "result_highway_quest";
+    public static final String YOUR_INFORMATION = "your_information";
+    public static final String OPPONENT_INFORMATION = "opponent_information";
+    public static final String PLATE_COLOR = "plate_color";
+    public static final String CAR_TYPE= "car_type";
+    public static final String NAME = "name";
+    public static final String PLATE_NUMBER = "plate_number";
+    public static final String INSURANCE_COMPANY = "insurance_company";
+    public static final String PHONE_NUMBER = "phone_number";
 
     // file names
     public static final String IMAGE_FRONT_SIDE_VIEW = "front_side_view";
