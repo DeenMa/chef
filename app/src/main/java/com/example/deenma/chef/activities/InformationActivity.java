@@ -190,7 +190,6 @@ public class InformationActivity extends Activity {
                     bundleYourInformation.putString(Constants.PHONE_NUMBER, editTextResultYourInformationPhoneNumber);
                     bundleInformationActivity.putBundle(Constants.YOUR_INFORMATION, bundleYourInformation);
 
-
                     Bundle bundleOpponentInformation = new Bundle();
                     bundleOpponentInformation.putCharSequence(Constants.PLATE_COLOR, spinnerResultOpponentInformationPlateColor);
                     bundleOpponentInformation.putCharSequence(Constants.CAR_TYPE, spinnerResultOpponentInformationCarType);

@@ -74,4 +74,24 @@
     <string name="information_textview_phone_number">Phone Number*</string>
     <string name="information_subtitle_opponent_information">Opponent\'s Information</string>
 
+    <string name="make_agreement_title">Make an Agreement</string>
+    <string name="make_agreement_accident_type">Type of Accident</string>
+    <string-array name="accident_types">
+        <item>Hit from back</item>
+        <item>Change lane</item>
+        <item>Fail to stop or yield</item>
+        <item>Others</item>
+    </string-array>
+    <string name="make_agreement_subtitle_your_information">Your Information</string>
+    <string name="make_agreement_textview_name">Name</string>
+    <string name="make_agreement_textview_plate_number">Plate Number</string>
+    <string name="make_agreement_textview_insurance_company">Insurance</string>
+    <string name="make_agreement_textview_phone_number">Phone Number</string>
+    <string name="make_agreement_textview_responsibility">Responsibility</string>
+    <string-array name="responsibility_types">
+        <item>Full</item>
+        <item>Partial</item>
+        <item>None</item>
+    </string-array>
+    <string name="make_agreement_subtitle_opponent_information">Opponent Information</string>
 </resources>

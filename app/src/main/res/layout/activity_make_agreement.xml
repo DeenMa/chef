@@ -2,6 +2,337 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background">
 
+    <TextView
+        android:id="@+id/make_agreement_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/make_agreement_title"
+        android:textSize="@dimen/large"
+        android:textColor="@color/text"/>
+
+    <ScrollView
+        android:id="@+id/make_agreement_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/margin_title_detail">
+
+        <LinearLayout
+            android:id="@+id/make_agreement_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/make_agreement_layout_accident_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_accident_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/make_agreement_accident_type"
+                    android:textSize="@dimen/medium"
+                    android:textColor="@color/text"/>
+
+                <Spinner
+                    android:id="@+id/make_agreement_spinner_accident_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_edittext">
+                </Spinner>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/make_agreement_subtitle_your_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/make_agreement_subtitle_your_information"
+                android:textSize="@dimen/medium"
+                android:textColor="@color/text"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/between_section"/>
+
+            <!-- seperate line -->
+            <LinearLayout
+                android:id="@+id/make_agreement_seperate_line_your_information"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/seperate_line"
+                android:background="@color/divider"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/make_agreement_linear_layout_your_information_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_your_information_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/make_agreement_textview_name"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_your_information_name_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/make_agreement_linear_layout_your_information_plate_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_your_information_plate_number"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/make_agreement_textview_plate_number"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_your_information_plate_number_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/make_agreement_linear_layout_your_information_insurance_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_your_information_insurance_company"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/make_agreement_textview_insurance_company"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_your_information_insurance_company_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/make_agreement_linear_layout_your_information_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_your_information_phone_number"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/make_agreement_textview_phone_number"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_your_information_phone_number_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/make_agreement_linear_layout_your_information_responsibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_your_information_responsibility"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/make_agreement_textview_responsibility"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <Spinner
+                    android:id="@+id/make_agreement_spinner_your_information_responsibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_edittext">
+                </Spinner>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/make_agreement_subtitle_opponent_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/make_agreement_subtitle_opponent_information"
+                android:textSize="@dimen/medium"
+                android:textColor="@color/text"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/between_section"/>
+
+            <!-- seperate line -->
+            <LinearLayout
+                android:id="@+id/make_agreement_seperate_line_opponent_information"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/seperate_line"
+                android:background="@color/divider"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/make_agreement_linear_layout_opponent_information_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_opponent_information_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/make_agreement_textview_name"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_opponent_information_name_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/make_agreement_linear_layout_opponent_information_plate_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_opponent_information_plate_number"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/make_agreement_textview_plate_number"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_opponent_information_name_plate_number_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/make_agreement_linear_layout_opponent_information_insurance_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_opponent_information_insurance_company"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/make_agreement_textview_insurance_company"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_opponent_information_insurance_company_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/make_agreement_linear_layout_opponent_information_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_opponent_information_phone_number"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/make_agreement_textview_phone_number"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_opponent_information_phone_number_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/make_agreement_linear_layout_opponent_information_responsibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/make_agreement_textview_opponent_information_responsibility"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/make_agreement_textview_responsibility"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <Spinner
+                    android:id="@+id/make_agreement_spinner_opponent_information_responsibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background_edittext">
+                </Spinner>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
