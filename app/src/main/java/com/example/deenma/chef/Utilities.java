@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.deenma.chef.activities.ImageViewActivity;
 
@@ -52,5 +54,19 @@ public class Utilities {
 
     public static boolean isNullOrEmpty(String string) {
         return string == null || string.length() == 0;
+    }
+
+    public static void setupButtons(final Activity activity, int viewId, final String constantId, final boolean take) {
+        Button button = (Button) activity.findViewById(viewId);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (take) {
+                    takePictureAndSave(activity, Constants.DRIVER_LICENSE_YOUR_CAR);
+                } else {
+                    viewImage(activity, constantId);
+                }
+            }
+        });
     }
 }

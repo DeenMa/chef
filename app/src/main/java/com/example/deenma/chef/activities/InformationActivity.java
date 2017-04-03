@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -15,6 +16,8 @@ import android.widget.Toast;
 import com.example.deenma.chef.Constants;
 import com.example.deenma.chef.R;
 import com.example.deenma.chef.Utilities;
+
+import java.lang.reflect.ParameterizedType;
 
 /**
  * Created by deenma on 29/03/2017.
@@ -44,132 +47,23 @@ public class InformationActivity extends Activity {
     }
 
     private void setupUI() {
-        final Context ctx = this;
+        final Context context = this;
         final Activity activity = this;
-        // highway quest
-        Spinner spinnerHighwayQuest = (Spinner) findViewById(R.id.information_spinner_highway_quest);
-        spinnerHighwayQuest.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                spinnerResultHighwayQuest = (CharSequence) parent.getItemAtPosition(position);
-            }
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                Toast.makeText(ctx, R.string.not_making_a_selection, Toast.LENGTH_SHORT).show();
-            }
-        });
-        ArrayAdapter<CharSequence> adapterHighwayQuest = ArrayAdapter.createFromResource(this, R.array.highway_options, android.R.layout.simple_spinner_item);
-        adapterHighwayQuest.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerHighwayQuest.setAdapter(adapterHighwayQuest);
-
-        // your information - plate color
-        Spinner spinnerYourInformationPlateColor = (Spinner) findViewById(R.id.information_spinner_your_information_plate_color);
-        spinnerYourInformationPlateColor.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                spinnerResultYourInformationPlateColor = (CharSequence) parent.getItemAtPosition(position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                Toast.makeText(ctx, R.string.not_making_a_selection, Toast.LENGTH_SHORT).show();
-            }
-        });
-        ArrayAdapter<CharSequence> adapterYourInformationPlateColor = ArrayAdapter.createFromResource(this, R.array.plate_colors, android.R.layout.simple_spinner_item);
-        adapterYourInformationPlateColor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerYourInformationPlateColor.setAdapter(adapterYourInformationPlateColor);
-
-        // your information - car type
-        Spinner spinnerYourInformationCarType = (Spinner) findViewById(R.id.information_spinner_your_information_car_type);
-        spinnerYourInformationCarType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                spinnerResultYourInformationCarType = (CharSequence) parent.getItemAtPosition(position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                Toast.makeText(ctx, R.string.not_making_a_selection, Toast.LENGTH_SHORT).show();
-            }
-        });
-        ArrayAdapter<CharSequence> adapterYourInformationCarType = ArrayAdapter.createFromResource(this, R.array.car_types, android.R.layout.simple_spinner_item);
-        adapterYourInformationCarType.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerYourInformationCarType.setAdapter(adapterYourInformationCarType);
-
-        // opponent information - plate color
-        Spinner spinnerOpponentInformationPlateColor = (Spinner) findViewById(R.id.information_spinner_opponent_information_plate_color);
-        spinnerOpponentInformationPlateColor.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                spinnerResultOpponentInformationPlateColor = (CharSequence) parent.getItemAtPosition(position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                Toast.makeText(ctx, R.string.not_making_a_selection, Toast.LENGTH_SHORT).show();
-            }
-        });
-        ArrayAdapter<CharSequence> adapterOpponentInformationPlateColor = ArrayAdapter.createFromResource(this, R.array.plate_colors, android.R.layout.simple_spinner_item);
-        adapterOpponentInformationPlateColor.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerOpponentInformationPlateColor.setAdapter(adapterOpponentInformationPlateColor);
-
-        // opponent information - car type
-        Spinner spinnerOpponentInformationCarType = (Spinner) findViewById(R.id.information_spinner_opponent_information_car_type);
-        spinnerOpponentInformationCarType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                spinnerResultOpponentInformationCarType = (CharSequence) parent.getItemAtPosition(position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                Toast.makeText(ctx, R.string.not_making_a_selection, Toast.LENGTH_SHORT).show();
-            }
-        });
-        ArrayAdapter<CharSequence> adapterOpponentInformationCarType = ArrayAdapter.createFromResource(this, R.array.car_types, android.R.layout.simple_spinner_item);
-        adapterOpponentInformationCarType.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerOpponentInformationCarType.setAdapter(adapterOpponentInformationCarType);
+        setupSpinner(R.id.information_spinner_highway_quest, context, R.array.highway_options, null, Constants.RESULT_HIGHWAY_QUEST); // highway quest
+        setupSpinner(R.id.information_spinner_your_information_plate_color, context, R.array.plate_colors, Constants.YOUR_INFORMATION, Constants.PLATE_COLOR); // your information - plate color
+        setupSpinner(R.id.information_spinner_your_information_car_type, context, R.array.car_types, Constants.YOUR_INFORMATION, Constants.CAR_TYPE); // your information - car type
+        setupSpinner(R.id.information_spinner_opponent_information_plate_color, context, R.array.plate_colors, Constants.OPPONENT_INFORMATION, Constants.PLATE_COLOR); // opponent information - plate color
+        setupSpinner(R.id.information_spinner_opponent_information_car_type, context, R.array.car_types, Constants.OPPONENT_INFORMATION, Constants.CAR_TYPE); // opponent information - car type
 
         // information_button_your_information_driver_license
-        Button buttonYourInformationDriverLicense =
-                (Button) findViewById(R.id.information_button_your_information_driver_license);
-        buttonYourInformationDriverLicense.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Utilities.viewImage(activity, Constants.DRIVER_LICENSE_YOUR_CAR);
-            }
-        });
-
+        Utilities.setupButtons(activity, R.id.information_button_your_information_driver_license, Constants.DRIVER_LICENSE_YOUR_CAR, false);
         // information_button_your_information_driver_license_take
-        Button buttonYourInformationDriverLicenseTake =
-                (Button) findViewById(R.id.information_button_your_information_driver_license_take);
-        buttonYourInformationDriverLicenseTake.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Utilities.takePictureAndSave(activity, Constants.DRIVER_LICENSE_YOUR_CAR);
-            }
-        });
-
+        Utilities.setupButtons(activity, R.id.information_button_your_information_driver_license_take, Constants.DRIVER_LICENSE_YOUR_CAR, true);
         // information_button_opponent_information_driver_license
-        Button buttonOpponentInformationDriverLicense =
-                (Button) findViewById(R.id.information_button_opponent_information_driver_license);
-        buttonOpponentInformationDriverLicense.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Utilities.viewImage(activity, Constants.DRIVER_LICENSE_OPPONENT_CAR);
-            }
-        });
-
+        Utilities.setupButtons(activity, R.id.information_button_opponent_information_driver_license, Constants.DRIVER_LICENSE_OPPONENT_CAR, false);
         // information_button_opponent_information_driver_license_take
-        Button buttonOpponentInformationDriverLicenseTake =
-                (Button) findViewById(R.id.information_button_opponent_information_driver_license_take);
-        buttonOpponentInformationDriverLicenseTake.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Utilities.takePictureAndSave(activity, Constants.DRIVER_LICENSE_OPPONENT_CAR);
-            }
-        });
+        Utilities.setupButtons(activity, R.id.information_button_opponent_information_driver_license_take, Constants.DRIVER_LICENSE_OPPONENT_CAR, true);
 
         // information_button_continue
         Button buttonContinue = (Button) findViewById(R.id.information_button_continue);
@@ -177,7 +71,7 @@ public class InformationActivity extends Activity {
             @Override
             public void onClick(View v) {
                 if (checkAvailability()) {
-                    Intent intent = new Intent(ctx, MakeAgreementActivity.class);
+                    Intent intent = new Intent(context, MakeAgreementActivity.class);
                     Bundle bundleInformationActivity = new Bundle();
                     bundleInformationActivity.putCharSequence(Constants.RESULT_HIGHWAY_QUEST, spinnerResultHighwayQuest);
 
@@ -262,5 +156,50 @@ public class InformationActivity extends Activity {
             return false;
         }
         return true;
+    }
+
+    /*
+* this is dirty code - are there any way of passing the object name as an argument into the function,
+* get the object by its name, and then assign value to it?
+* */
+    private void setupSpinner(int viewId, final Context ctx, int spinArrayOptions, final String people, final String property) {
+        Spinner spinner = (Spinner) findViewById(viewId);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                CharSequence result = (CharSequence) parent.getItemAtPosition(position);
+                if (people == null) {
+                    if (property.equals(Constants.RESULT_HIGHWAY_QUEST)) {
+                        spinnerResultHighwayQuest = result;
+                    }
+                } else if (people.equals(Constants.YOUR_INFORMATION)) {
+                    if (property.equals(Constants.PLATE_COLOR)) {
+                        spinnerResultYourInformationPlateColor = result;
+                    } else if (property.equals(Constants.CAR_TYPE)) {
+                        spinnerResultYourInformationCarType = result;
+                    } else {
+                        throw new RuntimeException("Cannot find property information!");
+                    }
+                } else if (people.equals(Constants.OPPONENT_INFORMATION)) {
+                    if (property.equals(Constants.PLATE_COLOR)) {
+                        spinnerResultOpponentInformationPlateColor = result;
+                    } else if (property.equals(Constants.CAR_TYPE)) {
+                        spinnerResultOpponentInformationCarType = result;
+                    } else {
+                        throw new RuntimeException("Cannot find property information!");
+                    }
+                } else {
+                    throw new RuntimeException("Cannot find person information!");
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                Toast.makeText(ctx, R.string.not_making_a_selection, Toast.LENGTH_SHORT).show();
+            }
+        });
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, spinArrayOptions, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
     }
 }
