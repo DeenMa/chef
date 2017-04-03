@@ -11,7 +11,7 @@ public class Constants {
     // request code
     public static final int REQUEST_IMAGE_CAPTURE = 1;
 
-    // ids
+    // ids and keys
     public static final int APP_NAME_ID = R.string.app_name;
     public static final String GET_IMAGE_REQUEST = "get_image_request";
     public static final String RESULT_HIGHWAY_QUEST = "result_highway_quest";
@@ -23,6 +23,9 @@ public class Constants {
     public static final String PLATE_NUMBER = "plate_number";
     public static final String INSURANCE_COMPANY = "insurance_company";
     public static final String PHONE_NUMBER = "phone_number";
+    public static final String ACCIDENT_TYPE = "accident_type";
+    public static final String RESPONSIBILITY = "responsibility";
+    public static final String BUNDLE_INFORMATION = "bundle_information";
 
     // file names
     public static final String IMAGE_FRONT_SIDE_VIEW = "front_side_view";

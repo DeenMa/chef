@@ -30,11 +30,12 @@
                 android:id="@+id/make_agreement_layout_accident_type"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/make_agreement_textview_accident_type"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="@string/make_agreement_accident_type"
                     android:textSize="@dimen/medium"
@@ -185,8 +186,9 @@
 
                 <Spinner
                     android:id="@+id/make_agreement_spinner_your_information_responsibility"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
                     android:background="@color/background_edittext">
                 </Spinner>
             </LinearLayout>
@@ -252,7 +254,7 @@
                     android:textSize="@dimen/medium"/>
 
                 <TextView
-                    android:id="@+id/make_agreement_textview_opponent_information_name_plate_number_result"
+                    android:id="@+id/make_agreement_textview_opponent_information_plate_number_result"
                     android:layout_width="0dp"
                     android:layout_weight="0.6"
                     android:layout_height="match_parent"
@@ -328,11 +330,41 @@
 
                 <Spinner
                     android:id="@+id/make_agreement_spinner_opponent_information_responsibility"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
                     android:background="@color/background_edittext">
                 </Spinner>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/make_agreement_layout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/make_agreement_button_agree"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_button"
+            android:text="@string/make_agreement_button_agree"
+            android:textColor="@color/text"
+            android:textSize="@dimen/medium"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/make_agreement_button_disagree"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_button_negative"
+            android:text="@string/make_agreement_button_disagree"
+            android:textColor="@color/text"
+            android:textSize="@dimen/medium"
+            android:gravity="center"/>
+    </LinearLayout>
 </LinearLayout>

@@ -94,4 +94,6 @@
         <item>None</item>
     </string-array>
     <string name="make_agreement_subtitle_opponent_information">Opponent Information</string>
+    <string name="make_agreement_button_agree">Agree</string>
+    <string name="make_agreement_button_disagree">Disagree</string>
 </resources>

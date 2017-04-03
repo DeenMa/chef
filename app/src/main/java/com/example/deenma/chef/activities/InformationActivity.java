@@ -93,6 +93,7 @@ public class InformationActivity extends Activity {
                     bundleOpponentInformation.putString(Constants.PHONE_NUMBER, editTextResultOpponentInformationPhoneNumber);
                     bundleInformationActivity.putBundle(Constants.OPPONENT_INFORMATION, bundleOpponentInformation);
 
+                    intent.putExtra(Constants.BUNDLE_INFORMATION, bundleInformationActivity);
                     startActivity(intent);
                 }
             }

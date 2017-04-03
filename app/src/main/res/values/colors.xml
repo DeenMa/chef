@@ -9,10 +9,12 @@
     <color name="colorRedDark">#943126</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="colorRedBright">#FF0900</color>
 
     <color name="background">@color/colorBlueLight</color>
     <color name="background_button">@color/colorBlueDark</color>
     <color name="text">@color/colorWhite</color>
     <color name="divider">@color/colorWhite</color>
     <color name="background_edittext">@color/colorWhite</color>
+    <color name="background_button_negative">@color/colorRedBright</color>
 </resources>
