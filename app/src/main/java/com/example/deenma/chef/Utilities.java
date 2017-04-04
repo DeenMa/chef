@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -33,6 +34,7 @@ public class Utilities {
 
     public static Uri getURIFromFilename(Activity activity, String filename) {
         File file = getOutputMediaFile(activity, filename);
+        Log.d(Utilities.class.getName(), file.getAbsolutePath());
         if (file != null) {
             return Uri.fromFile(file);
         }

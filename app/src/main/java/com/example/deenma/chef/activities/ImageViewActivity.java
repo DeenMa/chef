@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Display;
 import android.widget.ImageView;
 
 import com.example.deenma.chef.Constants;
@@ -31,8 +34,28 @@ public class ImageViewActivity extends Activity {
             Uri uri = Utilities.getURIFromFilename(this, filename);
             if (uri != null) {
                 ImageView imageView = (ImageView) findViewById(R.id.image_view);
-                imageView.setImageURI(uri);
+                Bitmap bitmapScaled = scale(uri);
+                imageView.setImageBitmap(bitmapScaled);
             }
         }
+    }
+
+    private Bitmap scale(Uri uri) {
+        Bitmap bitmap = BitmapFactory.decodeFile(uri.getPath());
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        float displayWidth = size.x;
+        float displayHeight = size.y;
+        float bitmapWidth = bitmap.getWidth();
+        float bitmapHeight = bitmap.getHeight();
+        Bitmap bitmapScaled = null;
+        if (bitmapWidth > displayWidth || bitmapHeight > displayHeight) {
+            float scale = Math.max(bitmapWidth / displayWidth, bitmapHeight / displayHeight);
+            bitmapScaled = Bitmap.createScaledBitmap(bitmap, (int) (bitmapWidth / scale), (int) (bitmapHeight / scale), true);
+        } else {
+            bitmapScaled = bitmap;
+        }
+        return bitmapScaled;
     }
 }

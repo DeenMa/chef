@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,10 +28,18 @@ public class MakeAgreementActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_make_agreement);
-        setupUI();
-
         Intent intent = getIntent();
         Bundle bundleInformationActivity = intent.getBundleExtra(Constants.BUNDLE_INFORMATION);
+        setupUI(bundleInformationActivity);
+
+    }
+
+    private void setupUI(Bundle bundleInformationActivity) {
+        final Context context = this;
+        setupSpinner(R.id.make_agreement_spinner_accident_type, context, R.array.accident_types, null, Constants.ACCIDENT_TYPE);
+        setupSpinner(R.id.make_agreement_spinner_your_information_responsibility, context, R.array.responsibility_types, Constants.YOUR_INFORMATION, Constants.RESPONSIBILITY);
+        setupSpinner(R.id.make_agreement_spinner_opponent_information_responsibility, context, R.array.responsibility_types, Constants.OPPONENT_INFORMATION, Constants.RESPONSIBILITY);
+
         writeTextView(bundleInformationActivity, Constants.YOUR_INFORMATION, Constants.NAME, R.id.make_agreement_textview_your_information_name_result);
         writeTextView(bundleInformationActivity, Constants.YOUR_INFORMATION, Constants.PLATE_NUMBER, R.id.make_agreement_textview_your_information_plate_number_result);
         writeTextView(bundleInformationActivity, Constants.YOUR_INFORMATION, Constants.INSURANCE_COMPANY, R.id.make_agreement_textview_your_information_insurance_company_result);
@@ -44,19 +53,16 @@ public class MakeAgreementActivity extends Activity {
 
     private void writeTextView(Bundle bundle, String person, String property, int viewId) {
         Bundle subBundle = bundle.getBundle(person);
-        String content = subBundle.getString(property);
+        String content = null;
+        if (subBundle != null) {
+            content = subBundle.getString(property);
+        }
         TextView textView = (TextView) findViewById(viewId);
-        textView.setText(content);
+        if (content != null) {
+            textView.setText(content);
+        }
     }
 
-    private void setupUI() {
-        final Context context = this;
-        setupSpinner(R.id.make_agreement_spinner_accident_type, context, R.array.accident_types, null, Constants.ACCIDENT_TYPE);
-        setupSpinner(R.id.make_agreement_spinner_your_information_responsibility, context, R.array.responsibility_types, Constants.YOUR_INFORMATION, Constants.RESPONSIBILITY);
-        setupSpinner(R.id.make_agreement_spinner_opponent_information_responsibility, context, R.array.responsibility_types, Constants.OPPONENT_INFORMATION, Constants.RESPONSIBILITY);
-
-        // TODO: setup Buttons for agree and disagree
-    }
     /*
     * Note this is very similar to setupSpinner(...) in InformationActivity (the only difference is the global variable names). When possible, refactor the code and combine these two functions
     * */
