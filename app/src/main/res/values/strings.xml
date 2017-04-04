@@ -96,4 +96,28 @@
     <string name="make_agreement_subtitle_opponent_information">Opponent Information</string>
     <string name="make_agreement_button_agree">Agree</string>
     <string name="make_agreement_button_disagree">Disagree</string>
+
+    <string name="agreement_agreement_title">Agreement</string>
+    <string name="agreement_agreement_time">Time</string>
+    <string name="agreement_agreement_time_result">Apr. 4, 2017 17:20:00</string>
+    <string name="agreement_agreement_location">Location</string>
+    <string name="agreement_agreement_location_result">Los Angeles, CA, USA</string>
+    <string name="agreement_agreement_accident_type">Accident Type</string>
+    <string name="agreement_agreement_accident_type_result">N/A</string>
+    <string name="agreement_person_a_title">Person A</string>
+    <string name="agreement_person_name">Name</string>
+    <string name="agreement_person_name_result">Name</string>
+    <string name="agreement_person_plate">Plate</string>
+    <string name="agreement_person_plate_result">Plate</string>
+    <string name="agreement_person_insurance">Insurance</string>
+    <string name="agreement_person_insurance_result">Insurance</string>
+    <string name="agreement_person_phone">Phone</string>
+    <string name="agreement_person_phone_result">Phone</string>
+    <string name="agreement_person_b_title">Person B</string>
+    <string name="agreement_section_iv_title">Responsibility</string>
+    <string name="agreement_responsibility_person_a">Person A</string>
+    <string name="agreement_responsibility_person_a_result">Person A Responsibility</string>
+    <string name="agreement_responsibility_person_b">Person B</string>
+    <string name="agreement_responsibility_person_b_result">Person B Responsibility</string>
+
 </resources>

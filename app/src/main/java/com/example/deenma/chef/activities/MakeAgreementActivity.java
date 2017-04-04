@@ -31,10 +31,9 @@ public class MakeAgreementActivity extends Activity {
         Intent intent = getIntent();
         Bundle bundleInformationActivity = intent.getBundleExtra(Constants.BUNDLE_INFORMATION);
         setupUI(bundleInformationActivity);
-
     }
 
-    private void setupUI(Bundle bundleInformationActivity) {
+    private void setupUI(final Bundle bundleInformationActivity) {
         final Context context = this;
         setupSpinner(R.id.make_agreement_spinner_accident_type, context, R.array.accident_types, null, Constants.ACCIDENT_TYPE);
         setupSpinner(R.id.make_agreement_spinner_your_information_responsibility, context, R.array.responsibility_types, Constants.YOUR_INFORMATION, Constants.RESPONSIBILITY);
@@ -49,6 +48,37 @@ public class MakeAgreementActivity extends Activity {
         writeTextView(bundleInformationActivity, Constants.OPPONENT_INFORMATION, Constants.PLATE_NUMBER, R.id.make_agreement_textview_opponent_information_plate_number_result);
         writeTextView(bundleInformationActivity, Constants.OPPONENT_INFORMATION, Constants.INSURANCE_COMPANY, R.id.make_agreement_textview_opponent_information_insurance_company_result);
         writeTextView(bundleInformationActivity, Constants.OPPONENT_INFORMATION, Constants.PHONE_NUMBER, R.id.make_agreement_textview_opponent_information_phone_number_result);
+
+        Button buttonAgree = (Button) findViewById(R.id.make_agreement_button_agree);
+        buttonAgree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { // include responsibility inside
+                Bundle bundleAgree = new Bundle(bundleInformationActivity);
+                bundleAgree.putCharSequence(Constants.ACCIDENT_TYPE, spinnerResultAccidentType);
+                Bundle bundleAgreeYourInformation = bundleAgree.getBundle(Constants.YOUR_INFORMATION);
+                bundleAgreeYourInformation.putCharSequence(Constants.RESPONSIBILITY, spinnerResultYourInformationResponsibility);
+                Bundle bundleAgreeOpponentInformation = bundleAgree.getBundle(Constants.OPPONENT_INFORMATION);
+                bundleAgreeOpponentInformation.putCharSequence(Constants.RESPONSIBILITY, spinnerResultOpponentInformationResponsibility);
+
+                // ??? Can we use the same key for all intents inside the app ???
+                Intent intent = new Intent(context, AgreementActivity.class);
+                intent.putExtra(Constants.BUNDLE_INFORMATION, bundleAgree);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonDisagree = (Button) findViewById(R.id.make_agreement_button_disagree);
+        buttonDisagree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { // do not include responsibility inside
+                Bundle bundleDisagree = new Bundle(bundleInformationActivity);
+                bundleDisagree.putCharSequence(Constants.ACCIDENT_TYPE, spinnerResultAccidentType);
+
+                Intent intent = new Intent(context, AgreementActivity.class);
+                intent.putExtra(Constants.BUNDLE_INFORMATION, bundleDisagree);
+                startActivity(intent);
+            }
+        });
     }
 
     private void writeTextView(Bundle bundle, String person, String property, int viewId) {

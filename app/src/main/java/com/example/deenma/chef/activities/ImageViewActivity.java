@@ -7,14 +7,11 @@ import android.graphics.BitmapFactory;
 import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Display;
 import android.widget.ImageView;
 
 import com.example.deenma.chef.Constants;
 import com.example.deenma.chef.R;
-
-import java.io.File;
 
 import com.example.deenma.chef.Utilities;
 
@@ -32,16 +29,16 @@ public class ImageViewActivity extends Activity {
         String filename = intent.getStringExtra(Constants.GET_IMAGE_REQUEST);
         if (filename != null) { // otherwise we don't open this file - leave the image view blank
             Uri uri = Utilities.getURIFromFilename(this, filename);
-            if (uri != null) {
+            Bitmap bitmapOriginal = BitmapFactory.decodeFile(uri.getPath());
+            if (bitmapOriginal != null) {
                 ImageView imageView = (ImageView) findViewById(R.id.image_view);
-                Bitmap bitmapScaled = scale(uri);
+                Bitmap bitmapScaled = scale(bitmapOriginal);
                 imageView.setImageBitmap(bitmapScaled);
             }
         }
     }
 
-    private Bitmap scale(Uri uri) {
-        Bitmap bitmap = BitmapFactory.decodeFile(uri.getPath());
+    private Bitmap scale(Bitmap bitmap) {
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:id="@+id/agreement_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Remember to change android:rowCount once rows are added / removed -->
+        <LinearLayout
+            android:id="@+id/agreement_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/agreement_agreement_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/agreement_agreement_title"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:textSize="@dimen/medium" />
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_agreement_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_agreement_time"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_agreement_time"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_agreement_time_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_agreement_time_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_agreement_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_agreement_location"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_agreement_location"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_agreement_location_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_agreement_location_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_agreement_accident_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_agreement_accident_type"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_agreement_accident_type"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_agreement_accident_type_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_agreement_accident_type_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/agreement_person_a_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/agreement_person_a_title"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:textSize="@dimen/medium" />
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_person_a_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_person_a_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_name"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_person_a_name_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_name_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_person_a_plate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_person_a_plate"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_plate"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_person_a_plate_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_plate_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_person_a_insurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_person_a_insurance"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_insurance"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_person_a_insurance_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_insurance_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_person_a_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_person_a_phone"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_phone"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_person_a_phone_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_phone_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/agreement_person_b_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/agreement_person_b_title"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:textSize="@dimen/medium" />
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_person_b_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_person_b_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_name"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_person_b_name_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_name_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_person_b_plate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_person_b_plate"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_plate"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_person_b_plate_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_plate_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_person_b_insurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_person_b_insurance"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_insurance"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_person_b_insurance_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_insurance_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_person_b_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_person_b_phone"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_phone"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_person_b_phone_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_person_phone_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/agreement_responsibility_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/agreement_section_iv_title"
+                android:gravity="center"
+                android:textColor="@color/text"
+                android:textSize="@dimen/medium" />
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_responsibility_person_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_responsibility_person_a"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_responsibility_person_a"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_responsibility_person_a_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_responsibility_person_a_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/agreement_linear_layout_responsibility_person_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/agreement_responsibility_person_b"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_responsibility_person_b"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+
+                <TextView
+                    android:id="@+id/agreement_responsibility_person_b_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_responsibility_person_b_result"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/small"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/agreement_button_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/seperate_line"
+        android:gravity="center"
+        android:text="@string/button_continue"
+        android:textSize="@dimen/medium"
+        android:textColor="@color/text"
+        android:background="@color/background_button"/>
+</LinearLayout>

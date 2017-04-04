@@ -2,6 +2,7 @@
 <resources>
     <dimen name="large">48sp</dimen>
     <dimen name="medium">24sp</dimen>
+    <dimen name="small">16sp</dimen>
     <dimen name="margin_title_detail">30dp</dimen>
     <dimen name="seperate_line">1dp</dimen>
     <dimen name="between_section">10dp</dimen>

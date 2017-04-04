@@ -5,6 +5,7 @@
     <uses-feature android:name="android.hardware.camera"
         android:required="true" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -30,5 +31,6 @@
         <activity android:name=".activities.InformationActivity"></activity>
         <activity android:name=".activities.ImageViewActivity"></activity>
         <activity android:name=".activities.MakeAgreementActivity"></activity>
+        <activity android:name=".activities.AgreementActivity"></activity>
     </application>
 </manifest>
