@@ -2,12 +2,17 @@ package com.example.deenma.chef;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Point;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.deenma.chef.activities.ImageViewActivity;
 
@@ -23,6 +28,36 @@ public class Utilities {
         Uri uri = Uri.fromFile(getOutputMediaFile(activity, filename));
         intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
         activity.startActivityForResult(intent, Constants.REQUEST_IMAGE_CAPTURE);
+    }
+
+    public static void attachImagePathToView(Activity activity, String filename, int viewId) {
+        if (filename != null) {
+            Uri uri = Utilities.getURIFromFilename(activity, filename);
+            Bitmap bitmapOriginal = BitmapFactory.decodeFile(uri.getPath());
+            if (bitmapOriginal != null) {
+                ImageView imageView = (ImageView) activity.findViewById(viewId);
+                Bitmap bitmapScaled = Utilities.scale(activity, bitmapOriginal);
+                imageView.setImageBitmap(bitmapScaled);
+            }
+        }
+    }
+
+    public static Bitmap scale(Activity activity, Bitmap bitmap) {
+        Display display = activity.getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        float displayWidth = size.x;
+        float displayHeight = size.y;
+        float bitmapWidth = bitmap.getWidth();
+        float bitmapHeight = bitmap.getHeight();
+        Bitmap bitmapScaled = null;
+        if (bitmapWidth > displayWidth || bitmapHeight > displayHeight) {
+            float scale = Math.max(bitmapWidth / displayWidth, bitmapHeight / displayHeight);
+            bitmapScaled = Bitmap.createScaledBitmap(bitmap, (int) (bitmapWidth / scale), (int) (bitmapHeight / scale), true);
+        } else {
+            bitmapScaled = bitmap;
+        }
+        return bitmapScaled;
     }
 
     public static void viewImage(Activity activity, String filename) {
@@ -64,7 +99,7 @@ public class Utilities {
             @Override
             public void onClick(View v) {
                 if (take) {
-                    takePictureAndSave(activity, Constants.DRIVER_LICENSE_YOUR_CAR);
+                    takePictureAndSave(activity, constantId);
                 } else {
                     viewImage(activity, constantId);
                 }

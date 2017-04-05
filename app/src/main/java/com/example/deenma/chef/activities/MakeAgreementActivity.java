@@ -20,9 +20,9 @@ import com.example.deenma.chef.R;
  */
 
 public class MakeAgreementActivity extends Activity {
-    private CharSequence spinnerResultAccidentType;
-    private CharSequence spinnerResultYourInformationResponsibility;
-    private CharSequence spinnerResultOpponentInformationResponsibility;
+    private String spinnerResultAccidentType;
+    private String spinnerResultYourInformationResponsibility;
+    private String spinnerResultOpponentInformationResponsibility;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,11 +54,11 @@ public class MakeAgreementActivity extends Activity {
             @Override
             public void onClick(View v) { // include responsibility inside
                 Bundle bundleAgree = new Bundle(bundleInformationActivity);
-                bundleAgree.putCharSequence(Constants.ACCIDENT_TYPE, spinnerResultAccidentType);
+                bundleAgree.putString(Constants.ACCIDENT_TYPE, spinnerResultAccidentType);
                 Bundle bundleAgreeYourInformation = bundleAgree.getBundle(Constants.YOUR_INFORMATION);
-                bundleAgreeYourInformation.putCharSequence(Constants.RESPONSIBILITY, spinnerResultYourInformationResponsibility);
+                bundleAgreeYourInformation.putString(Constants.RESPONSIBILITY, spinnerResultYourInformationResponsibility);
                 Bundle bundleAgreeOpponentInformation = bundleAgree.getBundle(Constants.OPPONENT_INFORMATION);
-                bundleAgreeOpponentInformation.putCharSequence(Constants.RESPONSIBILITY, spinnerResultOpponentInformationResponsibility);
+                bundleAgreeOpponentInformation.putString(Constants.RESPONSIBILITY, spinnerResultOpponentInformationResponsibility);
 
                 // ??? Can we use the same key for all intents inside the app ???
                 Intent intent = new Intent(context, AgreementActivity.class);
@@ -72,9 +72,9 @@ public class MakeAgreementActivity extends Activity {
             @Override
             public void onClick(View v) { // do not include responsibility inside
                 Bundle bundleDisagree = new Bundle(bundleInformationActivity);
-                bundleDisagree.putCharSequence(Constants.ACCIDENT_TYPE, spinnerResultAccidentType);
+                bundleDisagree.putString(Constants.ACCIDENT_TYPE, spinnerResultAccidentType);
 
-                Intent intent = new Intent(context, AgreementActivity.class);
+                Intent intent = new Intent(context, JudgementSendingActivity.class);
                 intent.putExtra(Constants.BUNDLE_INFORMATION, bundleDisagree);
                 startActivity(intent);
             }
@@ -101,7 +101,7 @@ public class MakeAgreementActivity extends Activity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                CharSequence result = (CharSequence) parent.getItemAtPosition(position);
+                String result = parent.getItemAtPosition(position).toString();
                 if (people == null) {
                     if (property.equals(Constants.ACCIDENT_TYPE)) {
                         spinnerResultAccidentType = result;

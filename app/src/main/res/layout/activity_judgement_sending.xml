@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/judgement_sending_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/judgement_title"
+        android:textSize="@dimen/large"
+        android:textColor="@color/text"/>
+
+    <TextView
+        android:id="@+id/judgement_sending_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_title_detail"
+        android:text="@string/judgement_sending_details"
+        android:textSize="@dimen/medium"
+        android:textColor="@color/text"/>
+
+    <!-- Please remove this ScrollView in the formal app -->
+    <ScrollView
+        android:id="@+id/judgement_sending_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/margin_title_detail">
+
+        <LinearLayout
+            android:id="@+id/judgement_sending_linear_layout_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/judgement_sending_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/judgement_sending_introduction_hidden"
+                android:textSize="@dimen/small"
+                android:textColor="@color/text"/>
+
+            <TextView
+                android:id="@+id/judgement_sending_information_public"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small"
+                android:textColor="@color/text"/>
+
+            <TextView
+                android:id="@+id/judgement_sending_your_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small"
+                android:textColor="@color/text"/>
+
+            <TextView
+                android:id="@+id/judgement_sending_opponent_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/small"
+                android:textColor="@color/text"/>
+
+            <ImageView
+                android:id="@+id/judgement_sending_imageview_front_side_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
+
+            <ImageView
+                android:id="@+id/judgement_sending_imageview_collision_your_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
+
+            <ImageView
+                android:id="@+id/judgement_sending_imageview_collision_opponent_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
+
+            <ImageView
+                android:id="@+id/judgement_sending_imageview_license_plate_your_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
+
+            <ImageView
+                android:id="@+id/judgement_sending_imageview_license_plate_opponent_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
+
+            <ImageView
+                android:id="@+id/judgement_sending_imageview_additional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
+
+            <ImageView
+                android:id="@+id/judgement_sending_imageview_your_driver_license"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
+
+            <ImageView
+                android:id="@+id/judgement_sending_imageview_opponent_driver_license"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

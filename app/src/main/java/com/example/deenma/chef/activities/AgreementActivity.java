@@ -115,7 +115,7 @@ public class AgreementActivity extends Activity implements
 
         // set accident type
         TextView agreementAccidentType = (TextView) findViewById(R.id.agreement_agreement_accident_type_result);
-        String stringAccidentType = bundle.getCharSequence(Constants.ACCIDENT_TYPE).toString();
+        String stringAccidentType = bundle.getString(Constants.ACCIDENT_TYPE);
         agreementAccidentType.setText(stringAccidentType);
 
         // set all personal information

@@ -120,4 +120,7 @@
     <string name="agreement_responsibility_person_b">Person B</string>
     <string name="agreement_responsibility_person_b_result">Person B Responsibility</string>
 
+    <string name="judgement_title">Judgement</string>
+    <string name="judgement_sending_details">This case had been transferred to PingAn insurance. The results will come soon.</string>
+    <string name="judgement_sending_introduction_hidden">Note: This (and below) content will not appear in the formal app. We show it here simply to imply what information will be transferred to server. These information includes: \nHighway? Accident type; \nName, Plate number, Plate color, Car type, Insurance company and Phone number from you and opponent. \nAll photos (in the order of: front side view, collision - your car, collision - opponent car, license plate - your car, license plate - opponent car, additional photo (if exist), driver license - you (if exist), driver license - your opponent) will be included as well\nIf you see an Android icon in a corresponding position, that means image at this order is not available\n</string>
 </resources>

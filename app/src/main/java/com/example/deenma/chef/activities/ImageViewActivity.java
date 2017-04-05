@@ -27,32 +27,6 @@ public class ImageViewActivity extends Activity {
 
         Intent intent = getIntent();
         String filename = intent.getStringExtra(Constants.GET_IMAGE_REQUEST);
-        if (filename != null) { // otherwise we don't open this file - leave the image view blank
-            Uri uri = Utilities.getURIFromFilename(this, filename);
-            Bitmap bitmapOriginal = BitmapFactory.decodeFile(uri.getPath());
-            if (bitmapOriginal != null) {
-                ImageView imageView = (ImageView) findViewById(R.id.image_view);
-                Bitmap bitmapScaled = scale(bitmapOriginal);
-                imageView.setImageBitmap(bitmapScaled);
-            }
-        }
-    }
-
-    private Bitmap scale(Bitmap bitmap) {
-        Display display = getWindowManager().getDefaultDisplay();
-        Point size = new Point();
-        display.getSize(size);
-        float displayWidth = size.x;
-        float displayHeight = size.y;
-        float bitmapWidth = bitmap.getWidth();
-        float bitmapHeight = bitmap.getHeight();
-        Bitmap bitmapScaled = null;
-        if (bitmapWidth > displayWidth || bitmapHeight > displayHeight) {
-            float scale = Math.max(bitmapWidth / displayWidth, bitmapHeight / displayHeight);
-            bitmapScaled = Bitmap.createScaledBitmap(bitmap, (int) (bitmapWidth / scale), (int) (bitmapHeight / scale), true);
-        } else {
-            bitmapScaled = bitmap;
-        }
-        return bitmapScaled;
+        Utilities.attachImagePathToView(this, filename, R.id.image_view);
     }
 }

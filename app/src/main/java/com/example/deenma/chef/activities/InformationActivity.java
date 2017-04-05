@@ -24,11 +24,11 @@ import java.lang.reflect.ParameterizedType;
  */
 
 public class InformationActivity extends Activity {
-    private CharSequence spinnerResultHighwayQuest;
-    private CharSequence spinnerResultYourInformationPlateColor;
-    private CharSequence spinnerResultYourInformationCarType;
-    private CharSequence spinnerResultOpponentInformationPlateColor;
-    private CharSequence spinnerResultOpponentInformationCarType;
+    private String spinnerResultHighwayQuest;
+    private String spinnerResultYourInformationPlateColor;
+    private String spinnerResultYourInformationCarType;
+    private String spinnerResultOpponentInformationPlateColor;
+    private String spinnerResultOpponentInformationCarType;
 
     private String editTextResultYourInformationName;
     private String editTextResultYourInformationPlateNumber;
@@ -73,11 +73,11 @@ public class InformationActivity extends Activity {
                 if (checkAvailability()) {
                     Intent intent = new Intent(context, MakeAgreementActivity.class);
                     Bundle bundleInformationActivity = new Bundle();
-                    bundleInformationActivity.putCharSequence(Constants.RESULT_HIGHWAY_QUEST, spinnerResultHighwayQuest);
+                    bundleInformationActivity.putString(Constants.RESULT_HIGHWAY_QUEST, spinnerResultHighwayQuest);
 
                     Bundle bundleYourInformation = new Bundle();
-                    bundleYourInformation.putCharSequence(Constants.PLATE_COLOR, spinnerResultYourInformationPlateColor);
-                    bundleYourInformation.putCharSequence(Constants.CAR_TYPE, spinnerResultYourInformationCarType);
+                    bundleYourInformation.putString(Constants.PLATE_COLOR, spinnerResultYourInformationPlateColor);
+                    bundleYourInformation.putString(Constants.CAR_TYPE, spinnerResultYourInformationCarType);
                     bundleYourInformation.putString(Constants.NAME, editTextResultYourInformationName);
                     bundleYourInformation.putString(Constants.PLATE_NUMBER, editTextResultYourInformationPlateNumber);
                     bundleYourInformation.putString(Constants.INSURANCE_COMPANY, editTextResultYourInformationInsuranceCompany);
@@ -85,8 +85,8 @@ public class InformationActivity extends Activity {
                     bundleInformationActivity.putBundle(Constants.YOUR_INFORMATION, bundleYourInformation);
 
                     Bundle bundleOpponentInformation = new Bundle();
-                    bundleOpponentInformation.putCharSequence(Constants.PLATE_COLOR, spinnerResultOpponentInformationPlateColor);
-                    bundleOpponentInformation.putCharSequence(Constants.CAR_TYPE, spinnerResultOpponentInformationCarType);
+                    bundleOpponentInformation.putString(Constants.PLATE_COLOR, spinnerResultOpponentInformationPlateColor);
+                    bundleOpponentInformation.putString(Constants.CAR_TYPE, spinnerResultOpponentInformationCarType);
                     bundleOpponentInformation.putString(Constants.NAME, editTextResultOpponentInformationName);
                     bundleOpponentInformation.putString(Constants.PLATE_NUMBER, editTextResultOpponentInformationPlateNumber);
                     bundleOpponentInformation.putString(Constants.INSURANCE_COMPANY, editTextResultOpponentInformationInsuranceCompany);
@@ -168,7 +168,7 @@ public class InformationActivity extends Activity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                CharSequence result = (CharSequence) parent.getItemAtPosition(position);
+                String result = parent.getItemAtPosition(position).toString();
                 if (people == null) {
                     if (property.equals(Constants.RESULT_HIGHWAY_QUEST)) {
                         spinnerResultHighwayQuest = result;

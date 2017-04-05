@@ -32,5 +32,6 @@
         <activity android:name=".activities.ImageViewActivity"></activity>
         <activity android:name=".activities.MakeAgreementActivity"></activity>
         <activity android:name=".activities.AgreementActivity"></activity>
+        <activity android:name=".activities.JudgementSendingActivity"></activity>
     </application>
 </manifest>
