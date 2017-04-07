@@ -6,7 +6,7 @@ package com.example.deenma.chef;
 
 public class Constants {
     // delay length
-    public static final Long DELAY_WELCOME_ACTIVITY = 3000L;
+    public static final Long DELAY_ACTIVITY = 3000L;
 
     // request code
     public static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -26,6 +26,7 @@ public class Constants {
     public static final String ACCIDENT_TYPE = "accident_type";
     public static final String RESPONSIBILITY = "responsibility";
     public static final String BUNDLE_INFORMATION = "bundle_information";
+    public static final String CALLING_ACTIVITY = "calling_activity";
 
     // file names
     public static final String IMAGE_FRONT_SIDE_VIEW = "front_side_view";

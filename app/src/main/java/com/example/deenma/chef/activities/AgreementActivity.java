@@ -41,6 +41,13 @@ public class AgreementActivity extends Activity implements
 
         Intent intent = getIntent();
         Bundle bundleAgree = intent.getBundleExtra(Constants.BUNDLE_INFORMATION);
+        // remove this "if statement" in the formal app, since the server returns the responsibility results. this is only a mock
+        if (bundleAgree.getString(Constants.CALLING_ACTIVITY).equals(JudgementSendingActivity.class.getName())) {
+            Bundle bundleAgreeYourInformation = bundleAgree.getBundle(Constants.YOUR_INFORMATION);
+            bundleAgreeYourInformation.putString(Constants.RESPONSIBILITY, "Partial");
+            Bundle bundleAgreeOpponentInformation = bundleAgree.getBundle(Constants.OPPONENT_INFORMATION);
+            bundleAgreeOpponentInformation.putString(Constants.RESPONSIBILITY, "Partial");
+        }
         setupUI(bundleAgree);
 
         if (mGoogleApiClient == null) {

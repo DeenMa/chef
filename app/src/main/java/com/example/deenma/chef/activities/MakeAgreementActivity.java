@@ -20,6 +20,8 @@ import com.example.deenma.chef.R;
  */
 
 public class MakeAgreementActivity extends Activity {
+    private static final String TAG = MakeAgreementActivity.class.getName();
+
     private String spinnerResultAccidentType;
     private String spinnerResultYourInformationResponsibility;
     private String spinnerResultOpponentInformationResponsibility;
@@ -54,6 +56,7 @@ public class MakeAgreementActivity extends Activity {
             @Override
             public void onClick(View v) { // include responsibility inside
                 Bundle bundleAgree = new Bundle(bundleInformationActivity);
+                bundleAgree.putString(Constants.CALLING_ACTIVITY, TAG);
                 bundleAgree.putString(Constants.ACCIDENT_TYPE, spinnerResultAccidentType);
                 Bundle bundleAgreeYourInformation = bundleAgree.getBundle(Constants.YOUR_INFORMATION);
                 bundleAgreeYourInformation.putString(Constants.RESPONSIBILITY, spinnerResultYourInformationResponsibility);

@@ -153,7 +153,6 @@
             android:text="@string/judgement_sending_button_continue"
             android:textColor="@color/text"
             android:textSize="@dimen/medium"
-            android:gravity="center"
-            android:visibility="gone"/>
+            android:gravity="center" />
     </LinearLayout>
 </LinearLayout>

@@ -5,10 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.deenma.chef.Constants;
 import com.example.deenma.chef.R;
-
-import static com.example.deenma.chef.Constants.DELAY_WELCOME_ACTIVITY;
-
 public class WelcomeActivity extends Activity {
 
     @Override
@@ -33,6 +31,6 @@ public class WelcomeActivity extends Activity {
                 startActivity(intent);
                 ctx.finish();
             }
-        }, DELAY_WELCOME_ACTIVITY);
+        }, Constants.DELAY_ACTIVITY);
     }
 }
