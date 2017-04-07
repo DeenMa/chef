@@ -5,13 +5,20 @@
     android:layout_height="match_parent"
     android:background="@color/background">
 
+    <TextView
+        android:id="@+id/agreement_screenshot_suggestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/agreement_screenshot_suggestion"
+        android:textColor="@color/text"
+        android:textSize="@dimen/small" />
+
     <ScrollView
         android:id="@+id/agreement_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <!-- Remember to change android:rowCount once rows are added / removed -->
         <LinearLayout
             android:id="@+id/agreement_linear_layout"
             android:layout_width="match_parent"
