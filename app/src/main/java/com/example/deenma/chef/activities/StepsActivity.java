@@ -27,6 +27,7 @@ public class StepsActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(ctx, TipsActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

@@ -26,6 +26,7 @@ public class TipsActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(ctx, TakePictureIActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

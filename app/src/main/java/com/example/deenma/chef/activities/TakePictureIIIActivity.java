@@ -25,6 +25,7 @@ public class TakePictureIIIActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(ctx, InformationActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

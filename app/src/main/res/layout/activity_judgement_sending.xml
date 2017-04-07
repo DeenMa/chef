@@ -114,4 +114,34 @@
                 android:src="@mipmap/ic_launcher"/>
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/judgement_sending_layout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/judgement_sending_button_back"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_button"
+            android:text="@string/judgement_sending_button_back"
+            android:textColor="@color/text"
+            android:textSize="@dimen/medium"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/judgement_sending_button_continue"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_button_judgement_result"
+            android:text="@string/judgement_sending_button_continue"
+            android:textColor="@color/text"
+            android:textSize="@dimen/medium"
+            android:gravity="center"
+            android:visibility="gone"/>
+    </LinearLayout>
 </LinearLayout>

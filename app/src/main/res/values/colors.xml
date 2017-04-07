@@ -17,4 +17,5 @@
     <color name="divider">@color/colorWhite</color>
     <color name="background_edittext">@color/colorWhite</color>
     <color name="background_button_negative">@color/colorRedBright</color>
+    <color name="background_button_judgement_result">@color/colorRedBright</color>
 </resources>

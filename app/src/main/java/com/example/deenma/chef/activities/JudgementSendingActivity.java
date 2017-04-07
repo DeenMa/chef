@@ -1,8 +1,11 @@
 package com.example.deenma.chef.activities;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.deenma.chef.Constants;
@@ -22,6 +25,7 @@ public class JudgementSendingActivity extends Activity {
         Intent intent = getIntent();
         Bundle bundleDisagree = intent.getBundleExtra(Constants.BUNDLE_INFORMATION);
         setupHiddenUI(bundleDisagree);
+        setupUI(bundleDisagree);
     }
 
     private void setupHiddenUI(Bundle bundle) {
@@ -64,5 +68,19 @@ public class JudgementSendingActivity extends Activity {
         }
         Bundle bundlePerson = bundle.getBundle(person);
         return bundlePerson.getString(property);
+    }
+
+    private void setupUI(final Bundle bundle) {
+        final Context context = this;
+        Button buttonBack = (Button) findViewById(R.id.judgement_sending_button_back);
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, MakeAgreementActivity.class);
+                intent.putExtra(Constants.BUNDLE_INFORMATION, bundle);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }
