@@ -60,21 +60,11 @@ public class TakePictureIIActivity extends Activity {
     }
 
     private boolean checkButtonContinue() {
-        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES), getString(Constants.APP_NAME_ID));
-        File[] list = mediaStorageDir.listFiles();
-        int num = 0;
-        for (File f : list) {
-            String fName = f.getName();
-            // we strictly restrict our images into one of these five types
-            if (fName.contains(Constants.IMAGE_FRONT_SIDE_VIEW)
-                    || fName.contains(Constants.IMAGE_COLLISION_YOUR_CAR)
-                    || fName.contains(Constants.IMAGE_COLLISION_OPPONENTS_CAR)
-                    || fName.contains(Constants.LICENSE_PLATE_YOUR_CAR)
-                    || fName.contains(Constants.LICENSE_PLATE_OPPONENTS_CAR)) {
-                num++;
-            }
-        }
-        return num == 5; // there shall be 5 effective images
+        return Utilities.checkRequiredImage(this, Constants.IMAGE_FRONT_SIDE_VIEW)
+                && Utilities.checkRequiredImage(this, Constants.IMAGE_COLLISION_YOUR_CAR)
+                && Utilities.checkRequiredImage(this, Constants.IMAGE_COLLISION_OPPONENTS_CAR)
+                && Utilities.checkRequiredImage(this, Constants.LICENSE_PLATE_YOUR_CAR)
+                && Utilities.checkRequiredImage(this, Constants.LICENSE_PLATE_OPPONENTS_CAR);
+
     }
 }

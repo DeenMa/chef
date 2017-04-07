@@ -165,6 +165,15 @@ public class InformationActivity extends Activity {
             Toast.makeText(this, "Opponent Information -> Insurance is empty", Toast.LENGTH_SHORT).show();
             return false;
         }
+
+        boolean requiredImagesCaptured = Utilities.checkRequiredImage(this, Constants.DRIVER_LICENSE_YOUR_CAR)
+                && Utilities.checkRequiredImage(this, Constants.DRIVER_LICENSE_OPPONENT_CAR)
+                && Utilities.checkRequiredImage(this, Constants.INSURANCE_CARD_YOUR_CAR)
+                && Utilities.checkRequiredImage(this, Constants.INSURANCE_CARD_OPPONENT_CAR);
+        if (!requiredImagesCaptured) {
+            Toast.makeText(this, R.string.not_enough_pics, Toast.LENGTH_SHORT).show();
+            return false;
+        }
         return true;
     }
 

@@ -106,4 +106,17 @@ public class Utilities {
             }
         });
     }
+
+    public static boolean checkRequiredImage(Activity activity, String imageId) {
+        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES), activity.getString(Constants.APP_NAME_ID));
+        File[] list = mediaStorageDir.listFiles();
+        for (File f : list) {
+            String fName = f.getName();
+            if (fName.contains(imageId)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
