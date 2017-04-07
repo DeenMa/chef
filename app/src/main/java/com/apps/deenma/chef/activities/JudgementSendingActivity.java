@@ -1,4 +1,4 @@
-package com.example.deenma.chef.activities;
+package com.apps.deenma.chef.activities;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.deenma.chef.Constants;
-import com.example.deenma.chef.R;
-import com.example.deenma.chef.Utilities;
+import com.apps.deenma.chef.Constants;
+import com.apps.deenma.chef.R;
+import com.apps.deenma.chef.Utilities;
 
 /**
  * Created by deenma on 05/04/2017.

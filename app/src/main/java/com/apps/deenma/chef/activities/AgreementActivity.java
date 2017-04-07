@@ -1,4 +1,4 @@
-package com.example.deenma.chef.activities;
+package com.apps.deenma.chef.activities;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -14,8 +14,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.deenma.chef.Constants;
-import com.example.deenma.chef.R;
+import com.apps.deenma.chef.Constants;
+import com.apps.deenma.chef.R;
 import com.google.android.gms.location.LocationServices;
 
 import java.io.IOException;

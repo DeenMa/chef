@@ -1,4 +1,4 @@
-package com.example.deenma.chef;
+package com.apps.deenma.chef;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -14,7 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.deenma.chef.activities.ImageViewActivity;
+import com.apps.deenma.chef.activities.ImageViewActivity;
 
 import java.io.File;
 

@@ -1,4 +1,4 @@
-package com.example.deenma.chef;
+package com.apps.deenma.chef;
 
 import org.junit.Test;
 

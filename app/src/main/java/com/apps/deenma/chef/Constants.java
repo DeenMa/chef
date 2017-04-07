@@ -1,4 +1,4 @@
-package com.example.deenma.chef;
+package com.apps.deenma.chef;
 
 /**
  * Created by deenma on 17/03/2017.

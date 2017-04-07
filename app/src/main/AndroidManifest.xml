@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.deenma.chef">
+    package="com.apps.deenma.chef">
 
     <uses-feature android:name="android.hardware.camera"
         android:required="true" />
@@ -16,22 +16,22 @@
         android:theme="@style/AppTheme"
         android:screenOrientation="portrait">
 
-        <activity android:name=".activities.WelcomeActivity">
+        <activity android:name="com.apps.deenma.chef.activities.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.StepsActivity"></activity>
-        <activity android:name=".activities.TipsActivity"></activity>
-        <activity android:name=".activities.TakePictureIActivity"></activity>
-        <activity android:name=".activities.TakePictureIIActivity"></activity>
-        <activity android:name=".activities.TakePictureIIIActivity"></activity>
-        <activity android:name=".activities.InformationActivity"></activity>
-        <activity android:name=".activities.ImageViewActivity"></activity>
-        <activity android:name=".activities.MakeAgreementActivity"></activity>
-        <activity android:name=".activities.AgreementActivity"></activity>
-        <activity android:name=".activities.JudgementSendingActivity"></activity>
+        <activity android:name="com.apps.deenma.chef.activities.StepsActivity"></activity>
+        <activity android:name="com.apps.deenma.chef.activities.TipsActivity"></activity>
+        <activity android:name="com.apps.deenma.chef.activities.TakePictureIActivity"></activity>
+        <activity android:name="com.apps.deenma.chef.activities.TakePictureIIActivity"></activity>
+        <activity android:name="com.apps.deenma.chef.activities.TakePictureIIIActivity"></activity>
+        <activity android:name="com.apps.deenma.chef.activities.InformationActivity"></activity>
+        <activity android:name="com.apps.deenma.chef.activities.ImageViewActivity"></activity>
+        <activity android:name="com.apps.deenma.chef.activities.MakeAgreementActivity"></activity>
+        <activity android:name="com.apps.deenma.chef.activities.AgreementActivity"></activity>
+        <activity android:name="com.apps.deenma.chef.activities.JudgementSendingActivity"></activity>
     </application>
 </manifest>

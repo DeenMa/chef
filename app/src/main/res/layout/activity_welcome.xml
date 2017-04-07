@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="@color/background"
-    tools:context="com.example.deenma.chef.activities.WelcomeActivity">
+    tools:context="com.apps.deenma.chef.activities.WelcomeActivity">
 
     <RelativeLayout
         android:id="@+id/welcome_layout"

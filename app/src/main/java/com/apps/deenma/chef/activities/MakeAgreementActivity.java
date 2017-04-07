@@ -1,4 +1,4 @@
-package com.example.deenma.chef.activities;
+package com.apps.deenma.chef.activities;
 
 import android.app.Activity;
 import android.content.Context;
@@ -12,8 +12,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.deenma.chef.Constants;
-import com.example.deenma.chef.R;
+import com.apps.deenma.chef.Constants;
+import com.apps.deenma.chef.R;
 
 /**
  * Created by deenma on 03/04/2017.

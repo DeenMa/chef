@@ -1,19 +1,13 @@
-package com.example.deenma.chef.activities;
+package com.apps.deenma.chef.activities;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Point;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.Display;
-import android.widget.ImageView;
 
-import com.example.deenma.chef.Constants;
-import com.example.deenma.chef.R;
+import com.apps.deenma.chef.Constants;
+import com.apps.deenma.chef.R;
 
-import com.example.deenma.chef.Utilities;
+import com.apps.deenma.chef.Utilities;
 
 /**
  * Created by deenma on 02/04/2017.
