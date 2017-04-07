@@ -64,6 +64,15 @@ public class InformationActivity extends Activity {
         Utilities.setupButtons(activity, R.id.information_button_opponent_information_driver_license, Constants.DRIVER_LICENSE_OPPONENT_CAR, false);
         // information_button_opponent_information_driver_license_take
         Utilities.setupButtons(activity, R.id.information_button_opponent_information_driver_license_take, Constants.DRIVER_LICENSE_OPPONENT_CAR, true);
+        // information_button_your_information_insurance_card
+        Utilities.setupButtons(activity, R.id.information_button_your_information_insurance_card, Constants.INSURANCE_CARD_YOUR_CAR, false);
+        // information_button_your_information_insurance_card_take
+        Utilities.setupButtons(activity, R.id.information_button_your_information_insurance_card_take, Constants.INSURANCE_CARD_YOUR_CAR, true);
+        // information_button_opponent_information_insurance_card
+        Utilities.setupButtons(activity, R.id.information_button_opponent_information_insurance_card, Constants.INSURANCE_CARD_OPPONENT_CAR, false);
+        // information_button_opponent_information_insurance_card_take
+        Utilities.setupButtons(activity, R.id.information_button_opponent_information_insurance_card_take, Constants.INSURANCE_CARD_OPPONENT_CAR, true);
+
 
         // information_button_continue
         Button buttonContinue = (Button) findViewById(R.id.information_button_continue);

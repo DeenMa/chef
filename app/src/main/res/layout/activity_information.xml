@@ -65,8 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/seperate_line"
-                android:orientation="horizontal"
-                android:layout_marginBottom="@dimen/between_section">
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/information_button_your_information_driver_license"
@@ -80,6 +79,35 @@
                     android:gravity="center_vertical"/>
                 <Button
                     android:id="@+id/information_button_your_information_driver_license_take"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/seperate_line"
+                    android:background="@color/background_button"
+                    android:text="@string/take_picture_text"
+                    android:textSize="@dimen/medium"
+                    android:textColor="@color/text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/information_linear_layout_your_information_insurance_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/seperate_line"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <Button
+                    android:id="@+id/information_button_your_information_insurance_card"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_button"
+                    android:text="@string/information_button_insurance_card"
+                    android:textSize="@dimen/medium"
+                    android:textColor="@color/text"
+                    android:gravity="center_vertical"/>
+                <Button
+                    android:id="@+id/information_button_your_information_insurance_card_take"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/seperate_line"
@@ -250,8 +278,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/seperate_line"
-                android:orientation="horizontal"
-                android:layout_marginBottom="@dimen/between_section">
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/information_button_opponent_information_driver_license"
@@ -265,6 +292,35 @@
                     android:gravity="center_vertical"/>
                 <Button
                     android:id="@+id/information_button_opponent_information_driver_license_take"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/seperate_line"
+                    android:background="@color/background_button"
+                    android:text="@string/take_picture_text"
+                    android:textSize="@dimen/medium"
+                    android:textColor="@color/text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/information_linear_layout_opponent_information_insurance_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/seperate_line"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <Button
+                    android:id="@+id/information_button_opponent_information_insurance_card"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_button"
+                    android:text="@string/information_button_insurance_card"
+                    android:textSize="@dimen/medium"
+                    android:textColor="@color/text"
+                    android:gravity="center_vertical"/>
+                <Button
+                    android:id="@+id/information_button_opponent_information_insurance_card_take"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="@dimen/seperate_line"

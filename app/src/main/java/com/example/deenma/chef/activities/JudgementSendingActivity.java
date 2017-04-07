@@ -25,7 +25,7 @@ public class JudgementSendingActivity extends Activity {
         Intent intent = getIntent();
         Bundle bundleDisagree = intent.getBundleExtra(Constants.BUNDLE_INFORMATION);
         setupHiddenUI(bundleDisagree);
-        setupUI(bundleDisagree);
+        setupUI();
     }
 
     private void setupHiddenUI(Bundle bundle) {
@@ -60,6 +60,8 @@ public class JudgementSendingActivity extends Activity {
         Utilities.attachImagePathToView(this, Constants.ADDITIONAL, R.id.judgement_sending_imageview_additional);
         Utilities.attachImagePathToView(this, Constants.DRIVER_LICENSE_YOUR_CAR, R.id.judgement_sending_imageview_your_driver_license);
         Utilities.attachImagePathToView(this, Constants.DRIVER_LICENSE_OPPONENT_CAR, R.id.judgement_sending_imageview_opponent_driver_license);
+        Utilities.attachImagePathToView(this, Constants.INSURANCE_CARD_YOUR_CAR, R.id.judgement_sending_imageview_your_insurance_card);
+        Utilities.attachImagePathToView(this, Constants.INSURANCE_CARD_OPPONENT_CAR, R.id.judgement_sending_imageview_opponent_insurance_card);
     }
 
     private String getStringFromBundle(Bundle bundle, String person, String property) {
@@ -70,15 +72,11 @@ public class JudgementSendingActivity extends Activity {
         return bundlePerson.getString(property);
     }
 
-    private void setupUI(final Bundle bundle) {
-        final Context context = this;
+    private void setupUI() {
         Button buttonBack = (Button) findViewById(R.id.judgement_sending_button_back);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, MakeAgreementActivity.class);
-                intent.putExtra(Constants.BUNDLE_INFORMATION, bundle);
-                startActivity(intent);
                 finish();
             }
         });

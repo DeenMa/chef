@@ -36,4 +36,7 @@ public class Constants {
     public static final String ADDITIONAL = "additional";
     public static final String DRIVER_LICENSE_YOUR_CAR = "driver_license_your_car";
     public static final String DRIVER_LICENSE_OPPONENT_CAR = "driver_license_opponent_car";
+    public static final String INSURANCE_CARD_YOUR_CAR = "insurance_card_your_car";
+    public static final String INSURANCE_CARD_OPPONENT_CAR = "insurance_card_opponent_car";
+
 }

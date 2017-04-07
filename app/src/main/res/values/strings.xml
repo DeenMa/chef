@@ -46,6 +46,7 @@
     </string-array>
     <string name="information_subtitle_your_information">Your Information</string>
     <string name="information_button_driver_license">Driver License</string>
+    <string name="information_button_insurance_card">Insurance Card</string>
     <string name="information_textview_name">Name*</string>
     <string name="information_textview_plate_number">Plate Number*</string>
     <string name="information_textview_plate_color">Plate Color</string>
@@ -122,7 +123,7 @@
 
     <string name="judgement_title">Judgement</string>
     <string name="judgement_sending_details">This case had been transferred to PingAn insurance. The results will come soon. Once came out, the Continue button will shown</string>
-    <string name="judgement_sending_introduction_hidden">Note: This (and below) content will not appear in the formal app. We show it here simply to imply what information will be transferred to server. These information includes: \nHighway? Accident type; \nName, Plate number, Plate color, Car type, Insurance company and Phone number from you and opponent. \nAll photos (in the order of: front side view, collision - your car, collision - opponent car, license plate - your car, license plate - opponent car, additional photo (if exist), driver license - you (if exist), driver license - your opponent) will be included as well\nIf you see an Android icon in a corresponding position, that means image at this order is not available\n</string>
+    <string name="judgement_sending_introduction_hidden">Note: This (and below) content will not appear in the formal app. We show it here simply to imply what information will be transferred to server. These information includes: \nHighway? Accident type; \nName, Plate number, Plate color, Car type, Insurance company and Phone number from you and opponent. \nAll photos (in the order of: front side view, collision - your car, collision - opponent car, license plate - your car, license plate - opponent car, additional photo (if exist), driver license - you (if exist), driver license - your opponent), insurance card - you (if exist), insurance card - opponent (if exist) will be included as well\nIf you see an Android icon in a corresponding position, that means image at this order is not available\n</string>
     <string name="judgement_sending_button_back">Back</string>
     <string name="judgement_sending_button_continue">Continue</string>
 </resources>

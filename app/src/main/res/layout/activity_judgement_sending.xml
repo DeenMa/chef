@@ -112,6 +112,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/ic_launcher"/>
+
+            <ImageView
+                android:id="@+id/judgement_sending_imageview_your_insurance_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
+
+            <ImageView
+                android:id="@+id/judgement_sending_imageview_opponent_insurance_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"/>
         </LinearLayout>
     </ScrollView>
 
