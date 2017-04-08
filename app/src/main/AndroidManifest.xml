@@ -34,5 +34,6 @@
         <activity android:name="com.apps.deenma.chef.activities.MakeAgreementActivity"></activity>
         <activity android:name="com.apps.deenma.chef.activities.AgreementActivity"></activity>
         <activity android:name="com.apps.deenma.chef.activities.JudgementSendingActivity"></activity>
+        <activity android:name="com.apps.deenma.chef.activities.FileClaimActivity"></activity>
     </application>
 </manifest>

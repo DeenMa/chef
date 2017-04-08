@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/file_claim_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/file_claim_title"
+        android:textColor="@color/text"
+        android:textSize="@dimen/large" />
+
+    <TextView
+        android:id="@+id/file_claim_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_title_detail"
+        android:text="@string/file_claim_details"
+        android:textColor="@color/text"
+        android:textSize="@dimen/medium"/>
+
+    <ScrollView
+        android:id="@+id/file_claim_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/between_section">
+
+        <LinearLayout
+            android:id="@+id/file_claim_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/file_claim_subtitle_person_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/file_claim_subtitle_person_a"
+                android:textSize="@dimen/medium"
+                android:textColor="@color/text"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/between_section"/>
+
+            <!-- seperate line -->
+            <LinearLayout
+                android:id="@+id/file_claim_seperate_line_person_a"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/seperate_line"
+                android:background="@color/divider"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/file_claim_linear_layout_person_a_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/file_claim_textview_person_a_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/file_claim_textview_name"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/file_claim_textview_person_a_name_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/file_claim_linear_layout_responsibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/file_claim_textview_responsibility"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/file_claim_responsibility_name"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/file_claim_textview_responsibility_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/file_claim_linear_layout_insurance_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/file_claim_textview_insurance_company"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/file_claim_insurance_company_name"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/file_claim_textview_insurance_company_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/file_claim_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/between_section"
+        android:text="@string/file_claim_note"
+        android:textColor="@color/text"
+        android:textSize="@dimen/medium"/>
+
+    <LinearLayout
+        android:id="@+id/file_claim_layout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/between_section"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/file_claim_button_file"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_button"
+            android:text="@string/file_claim_button_file"
+            android:textColor="@color/text"
+            android:textSize="@dimen/medium"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/file_claim_button_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:background="@color/background_button_negative"
+            android:text="@string/file_claim_button_cancel"
+            android:textColor="@color/text"
+            android:textSize="@dimen/medium"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

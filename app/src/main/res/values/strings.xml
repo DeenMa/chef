@@ -98,7 +98,7 @@
     <string name="make_agreement_button_agree">Agree</string>
     <string name="make_agreement_button_disagree">Disagree</string>
 
-    <string name="agreement_screenshot_suggestion">We suggest you to take screenshots of this page for future reference. For Android device, hold "Home" and "Power" buttons at the same time.</string>
+    <string name="agreement_screenshot_suggestion">We suggest you to take screenshots of this page for future reference. For Android device, hold "Home" (or "Volumn Down") and "Power" buttons at the same time.</string>
     <string name="agreement_agreement_title">Agreement</string>
     <string name="agreement_agreement_time">Time</string>
     <string name="agreement_agreement_time_result">Apr. 4, 2017 17:20:00</string>
@@ -127,4 +127,15 @@
     <string name="judgement_sending_introduction_hidden">Note: This (and below) content will not appear in the formal app. We show it here simply to imply what information will be transferred to server. These information includes: \nHighway? Accident type; \nName, Plate number, Plate color, Car type, Insurance company and Phone number from you and opponent. \nAll photos (in the order of: front side view, collision - your car, collision - opponent car, license plate - your car, license plate - opponent car, additional photo (if exist), driver license - you (if exist), driver license - your opponent), insurance card - you (if exist), insurance card - opponent (if exist) will be included as well\nIf you see an Android icon in a corresponding position, that means image at this order is not available\n</string>
     <string name="judgement_sending_button_back">Back</string>
     <string name="judgement_sending_button_continue">Continue</string>
+
+    <string name="file_claim_title">File the Claim</string>
+    <string name="file_claim_details">Now you can file the claim</string>
+    <string name="file_claim_subtitle_person_a">Person A</string>
+    <string name="file_claim_textview_name">Name</string>
+    <string name="file_claim_responsibility_name">Responsibility</string>
+    <string name="file_claim_insurance_company_name">Insurance</string>
+    <string name="file_claim_note">Note: If you are not responsible, please get approval from the person with full responsibility.</string>
+    <string name="file_claim_button_file">File</string>
+    <string name="file_claim_button_cancel">Cancel</string>
+
 </resources>

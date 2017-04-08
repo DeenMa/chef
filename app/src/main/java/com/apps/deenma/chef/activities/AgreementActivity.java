@@ -1,5 +1,6 @@
 package com.apps.deenma.chef.activities;
 
+import com.apps.deenma.chef.Utilities;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import android.app.Activity;
@@ -126,19 +127,19 @@ public class AgreementActivity extends Activity implements
         agreementAccidentType.setText(stringAccidentType);
 
         // set all personal information
-        setText(bundle, Constants.YOUR_INFORMATION, Constants.NAME, R.id.agreement_person_a_name_result);
-        setText(bundle, Constants.YOUR_INFORMATION, Constants.PLATE_NUMBER, R.id.agreement_person_a_plate_result);
-        setText(bundle, Constants.YOUR_INFORMATION, Constants.INSURANCE_COMPANY, R.id.agreement_person_a_insurance_result);
-        setText(bundle, Constants.YOUR_INFORMATION, Constants.PHONE_NUMBER, R.id.agreement_person_a_phone_result);
+        Utilities.setText(bundle, this, Constants.YOUR_INFORMATION, Constants.NAME, R.id.agreement_person_a_name_result);
+        Utilities.setText(bundle, this, Constants.YOUR_INFORMATION, Constants.PLATE_NUMBER, R.id.agreement_person_a_plate_result);
+        Utilities.setText(bundle, this, Constants.YOUR_INFORMATION, Constants.INSURANCE_COMPANY, R.id.agreement_person_a_insurance_result);
+        Utilities.setText(bundle, this, Constants.YOUR_INFORMATION, Constants.PHONE_NUMBER, R.id.agreement_person_a_phone_result);
 
-        setText(bundle, Constants.OPPONENT_INFORMATION, Constants.NAME, R.id.agreement_person_b_name_result);
-        setText(bundle, Constants.OPPONENT_INFORMATION, Constants.PLATE_NUMBER, R.id.agreement_person_b_plate_result);
-        setText(bundle, Constants.OPPONENT_INFORMATION, Constants.INSURANCE_COMPANY, R.id.agreement_person_b_insurance_result);
-        setText(bundle, Constants.OPPONENT_INFORMATION, Constants.PHONE_NUMBER, R.id.agreement_person_b_phone_result);
+        Utilities.setText(bundle, this, Constants.OPPONENT_INFORMATION, Constants.NAME, R.id.agreement_person_b_name_result);
+        Utilities.setText(bundle, this, Constants.OPPONENT_INFORMATION, Constants.PLATE_NUMBER, R.id.agreement_person_b_plate_result);
+        Utilities.setText(bundle, this, Constants.OPPONENT_INFORMATION, Constants.INSURANCE_COMPANY, R.id.agreement_person_b_insurance_result);
+        Utilities.setText(bundle, this, Constants.OPPONENT_INFORMATION, Constants.PHONE_NUMBER, R.id.agreement_person_b_phone_result);
 
         // set responsibilities
-        setText(bundle, Constants.YOUR_INFORMATION, Constants.RESPONSIBILITY, R.id.agreement_responsibility_person_a_result);
-        setText(bundle, Constants.OPPONENT_INFORMATION, Constants.RESPONSIBILITY, R.id.agreement_responsibility_person_b_result);
+        Utilities.setText(bundle, this, Constants.YOUR_INFORMATION, Constants.RESPONSIBILITY, R.id.agreement_responsibility_person_a_result);
+        Utilities.setText(bundle, this, Constants.OPPONENT_INFORMATION, Constants.RESPONSIBILITY, R.id.agreement_responsibility_person_b_result);
 
         // get the final information to file the claim
         final Context context = this;
@@ -146,16 +147,11 @@ public class AgreementActivity extends Activity implements
         buttonContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: wait until get response from wechat group
+                Intent intent = new Intent(context, FileClaimActivity.class);
+                intent.putExtra(Constants.BUNDLE_INFORMATION, bundle);
+                startActivity(intent);
             }
         });
-    }
-
-    private void setText(Bundle bundle, String personId, String propertyId, int viewId) {
-        Bundle bundlePerson = bundle.getBundle(personId);
-        String string = bundlePerson.getString(propertyId);
-        TextView textView = (TextView) findViewById(viewId);
-        textView.setText(string);
     }
 
     private String getCurrentTime() {

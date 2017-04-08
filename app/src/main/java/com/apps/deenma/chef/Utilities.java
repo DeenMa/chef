@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Point;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.apps.deenma.chef.activities.ImageViewActivity;
 
@@ -118,5 +120,12 @@ public class Utilities {
             }
         }
         return false;
+    }
+
+    public static void setText(Bundle bundle, Activity activity, String personId, String propertyId, int viewId) {
+        Bundle bundlePerson = bundle.getBundle(personId);
+        String string = bundlePerson.getString(propertyId);
+        TextView textView = (TextView) activity.findViewById(viewId);
+        textView.setText(string);
     }
 }
