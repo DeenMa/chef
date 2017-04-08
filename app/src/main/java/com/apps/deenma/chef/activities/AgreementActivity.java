@@ -117,6 +117,7 @@ public class AgreementActivity extends Activity implements
         // get current time
         TextView agreementTime = (TextView) findViewById(R.id.agreement_agreement_time_result);
         String currentTime = getCurrentTime();
+        bundle.putString(Constants.TIME, currentTime);
         agreementTime.setText(currentTime);
 
         // location information is set by onConnected()
@@ -143,6 +144,7 @@ public class AgreementActivity extends Activity implements
 
         // get the final information to file the claim
         final Context context = this;
+        final Activity activity = this;
         Button buttonContinue = (Button) findViewById(R.id.agreement_button_continue);
         buttonContinue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,7 +157,7 @@ public class AgreementActivity extends Activity implements
     }
 
     private String getCurrentTime() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         return sdf.format(new Date());
     }
 }

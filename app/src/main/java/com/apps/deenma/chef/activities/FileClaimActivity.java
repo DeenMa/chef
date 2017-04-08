@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.apps.deenma.chef.Constants;
 import com.apps.deenma.chef.R;
@@ -35,7 +37,19 @@ public class FileClaimActivity extends Activity {
         buttonFile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO:
+                // save all pictures into history folder, delay 3 seconds, and move to FileSuccessActivity
+                Toast.makeText(context, R.string.transfer_to_server, Toast.LENGTH_SHORT).show();
+                final Intent intent = new Intent(context, FileSuccessActivity.class);
+                intent.putExtra(Constants.BUNDLE_INFORMATION, bundle);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(intent);
+                        finish();
+                    }
+                }, Constants.DELAY_ACTIVITY);
             }
         });
 
@@ -43,7 +57,13 @@ public class FileClaimActivity extends Activity {
         buttonCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO:
+                // move to FileCanceledActivity, remember to display all the required opponents information into this activity
+                /*
+                Intent intent = new Intent(context, FileFailedActivity.class);
+                intent.putExtra(Constants.BUNDLE_INFORMATION, bundle);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                */
             }
         });
     }

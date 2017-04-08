@@ -137,5 +137,13 @@
     <string name="file_claim_note">Note: If you are not responsible, please get approval from the person with full responsibility.</string>
     <string name="file_claim_button_file">File</string>
     <string name="file_claim_button_cancel">Cancel</string>
+    <string name="transfer_to_server">Transferring to server</string>
 
+    <string name="file_success_title">Filed Successfully</string>
+    <string name="file_success_details">The insurance company will contact you soon.</string>
+    <string name="file_success_button_finish">Finish</string>
+    <string name="file_success_person_a">Person A</string>
+    <string name="file_success_textview">Name</string>
+    <string name="file_success_insurance">Insurance</string>
+    <string name="file_success_time">Time</string>
 </resources>

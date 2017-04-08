@@ -27,6 +27,8 @@ public class Constants {
     public static final String RESPONSIBILITY = "responsibility";
     public static final String BUNDLE_INFORMATION = "bundle_information";
     public static final String CALLING_ACTIVITY = "calling_activity";
+    public static final String TIME = "time";
+    public static final String LOCATION = "location";
 
     // file names
     public static final String IMAGE_FRONT_SIDE_VIEW = "front_side_view";
