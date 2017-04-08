@@ -116,7 +116,7 @@ public class AgreementActivity extends Activity implements
     private void setupUI(final Bundle bundle) {
         // get current time
         TextView agreementTime = (TextView) findViewById(R.id.agreement_agreement_time_result);
-        String currentTime = getCurrentTime();
+        String currentTime = Utilities.getCurrentTime("yyyy/MM/dd HH:mm:ss");
         bundle.putString(Constants.TIME, currentTime);
         agreementTime.setText(currentTime);
 
@@ -156,8 +156,5 @@ public class AgreementActivity extends Activity implements
         });
     }
 
-    private String getCurrentTime() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        return sdf.format(new Date());
-    }
+
 }

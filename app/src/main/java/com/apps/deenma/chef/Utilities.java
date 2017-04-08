@@ -19,6 +19,8 @@ import android.widget.TextView;
 import com.apps.deenma.chef.activities.ImageViewActivity;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by deenma on 02/04/2017.
@@ -127,5 +129,10 @@ public class Utilities {
         String string = bundlePerson.getString(propertyId);
         TextView textView = (TextView) activity.findViewById(viewId);
         textView.setText(string);
+    }
+
+    public static String getCurrentTime(String format) {
+        SimpleDateFormat sdf = new SimpleDateFormat(format);
+        return sdf.format(new Date());
     }
 }
