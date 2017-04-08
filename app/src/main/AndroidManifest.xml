@@ -28,7 +28,8 @@
         <activity android:name="com.apps.deenma.chef.activities.TakePictureIActivity"></activity>
         <activity android:name="com.apps.deenma.chef.activities.TakePictureIIActivity"></activity>
         <activity android:name="com.apps.deenma.chef.activities.TakePictureIIIActivity"></activity>
-        <activity android:name="com.apps.deenma.chef.activities.InformationActivity"></activity>
+        <activity android:name="com.apps.deenma.chef.activities.InformationActivity"
+            android:windowSoftInputMode="stateHidden"></activity>
         <activity android:name="com.apps.deenma.chef.activities.ImageViewActivity"></activity>
         <activity android:name="com.apps.deenma.chef.activities.MakeAgreementActivity"></activity>
         <activity android:name="com.apps.deenma.chef.activities.AgreementActivity"></activity>
