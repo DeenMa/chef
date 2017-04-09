@@ -144,7 +144,6 @@ public class AgreementActivity extends Activity implements
 
         // get the final information to file the claim
         final Context context = this;
-        final Activity activity = this;
         Button buttonContinue = (Button) findViewById(R.id.agreement_button_continue);
         buttonContinue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,6 +154,4 @@ public class AgreementActivity extends Activity implements
             }
         });
     }
-
-
 }

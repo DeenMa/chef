@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/file_canceled_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/file_canceled_title"
+        android:textColor="@color/text"
+        android:textSize="@dimen/large"/>
+
+    <TextView
+        android:id="@+id/file_canceled_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_title_detail"
+        android:text="@string/file_canceled_details"
+        android:textColor="@color/text"
+        android:textSize="@dimen/small"/>
+
+    <ScrollView
+        android:id="@+id/file_success_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/file_success_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/file_canceled_opponent_information_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/between_section"
+                android:text="@string/file_canceled_opponent_information_title"
+                android:textColor="@color/text"
+                android:textSize="@dimen/medium"
+                android:gravity="center"/>
+
+            <!-- seperate line -->
+            <LinearLayout
+                android:id="@+id/file_canceled_seperate_line_opponent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/seperate_line"
+                android:background="@color/divider"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/file_canceled_linear_layout_opponent_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/file_canceled_textview_opponent_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/file_canceled_textview_name"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/file_canceled_textview_opponent_name_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/file_canceled_linear_layout_opponent_license_plate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/file_canceled_textview_opponent_license_plate"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/file_canceled_textview_license_plate"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/file_canceled_textview_opponent_license_plate_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/file_canceled_linear_layout_opponent_insurance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/file_canceled_textview_opponent_insurance"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/file_canceled_textview_insurance"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/file_canceled_textview_opponent_insurance_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/file_canceled_linear_layout_opponent_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/between_section">
+
+                <TextView
+                    android:id="@+id/file_canceled_textview_opponent_phone_number"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="match_parent"
+                    android:text="@string/file_canceled_textview_phone_number"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+
+                <TextView
+                    android:id="@+id/file_canceled_textview_opponent_phone_number_result"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/medium"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/file_canceled_button_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_button"
+        android:text="@string/file_canceled_button_finish"
+        android:textColor="@color/text"
+        android:textSize="@dimen/medium"/>
+</LinearLayout>

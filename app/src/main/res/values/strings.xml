@@ -146,4 +146,13 @@
     <string name="file_success_textview">Name</string>
     <string name="file_success_insurance">Insurance</string>
     <string name="file_success_time">Time</string>
+
+    <string name="file_canceled_title">File Canceled</string>
+    <string name="file_canceled_details">You decided not to file at this time. All the images are saved and can be found at "/Pictures/eClaim-PAIC/" folder. Please save (take a note or screenshot) all the opponent information in this page for future reference. These will be discarded once you click Finish button.</string>
+    <string name="file_canceled_opponent_information_title">Opponent Information</string>
+    <string name="file_canceled_textview_name">Name</string>
+    <string name="file_canceled_textview_license_plate">Plate</string>
+    <string name="file_canceled_textview_insurance">Insurance</string>
+    <string name="file_canceled_textview_phone_number">Phone</string>
+    <string name="file_canceled_button_finish">Finish</string>
 </resources>

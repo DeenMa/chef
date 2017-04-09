@@ -45,7 +45,7 @@ public class FileClaimActivity extends Activity {
             @Override
             public void onClick(View v) {
                 // save all pictures into history folder, delay 3 seconds, and move to FileSuccessActivity
-                moveAllImageFilesToHistoryFolder(activity, bundle);
+                moveAllImageFilesToHistoryFolder(activity);
                 Toast.makeText(context, R.string.transfer_to_server, Toast.LENGTH_SHORT).show();
                 final Intent intent = new Intent(context, FileSuccessActivity.class);
                 intent.putExtra(Constants.BUNDLE_INFORMATION, bundle);
@@ -65,13 +65,17 @@ public class FileClaimActivity extends Activity {
         buttonCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO: implement this + activity, Tell the user where can they find the picture, and basic opponent information
+                Intent intent = new Intent(context, FileCanceledActivity.class);
+                intent.putExtra(Constants.BUNDLE_INFORMATION, bundle);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
             }
         });
     }
 
     // to move them in order not to mix images from old claim with images with new claim
-    private void moveAllImageFilesToHistoryFolder(Activity activity, Bundle bundle) {
+    private void moveAllImageFilesToHistoryFolder(Activity activity) {
         String stringTime = Utilities.getCurrentTime("yyyyMMddHHmmss");
         File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_PICTURES), activity.getString(Constants.APP_NAME_ID));
